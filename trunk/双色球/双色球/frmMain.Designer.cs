@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuData = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataAwardUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataLotteryUpdate = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,7 +39,8 @@
             this.mnuDataHistoryUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tbarData = new System.Windows.Forms.ToolStripButton();
-            this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDataGraph = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDataGraphStatisLastFive = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +49,8 @@
             // 
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuFile,
-            this.mnuData});
+            this.mnuData,
+            this.mnuDataGraph});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Size = new System.Drawing.Size(593, 24);
@@ -61,6 +64,12 @@
             this.menuFile.Name = "menuFile";
             this.menuFile.Size = new System.Drawing.Size(41, 20);
             this.menuFile.Text = "文件";
+            // 
+            // menuFileExit
+            // 
+            this.menuFileExit.Name = "menuFileExit";
+            this.menuFileExit.Size = new System.Drawing.Size(94, 22);
+            this.menuFileExit.Text = "退出";
             // 
             // mnuData
             // 
@@ -76,27 +85,27 @@
             // mnuDataAwardUpdate
             // 
             this.mnuDataAwardUpdate.Name = "mnuDataAwardUpdate";
-            this.mnuDataAwardUpdate.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataAwardUpdate.Size = new System.Drawing.Size(152, 22);
             this.mnuDataAwardUpdate.Text = "开奖数据下载";
             this.mnuDataAwardUpdate.Click += new System.EventHandler(this.mnuDataAwardUpdate_Click);
             // 
             // mnuDataLotteryUpdate
             // 
             this.mnuDataLotteryUpdate.Name = "mnuDataLotteryUpdate";
-            this.mnuDataLotteryUpdate.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataLotteryUpdate.Size = new System.Drawing.Size(152, 22);
             this.mnuDataLotteryUpdate.Text = "彩票期号下载";
             this.mnuDataLotteryUpdate.Click += new System.EventHandler(this.mnuDataLotteryUpdate_Click);
             // 
             // mnuDataLotteryRefresh
             // 
             this.mnuDataLotteryRefresh.Name = "mnuDataLotteryRefresh";
-            this.mnuDataLotteryRefresh.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataLotteryRefresh.Size = new System.Drawing.Size(152, 22);
             this.mnuDataLotteryRefresh.Text = "刷新彩票期号";
             // 
             // mnuDataHistoryUpdate
             // 
             this.mnuDataHistoryUpdate.Name = "mnuDataHistoryUpdate";
-            this.mnuDataHistoryUpdate.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataHistoryUpdate.Size = new System.Drawing.Size(152, 22);
             this.mnuDataHistoryUpdate.Text = "历史数据更新";
             // 
             // toolStrip1
@@ -118,11 +127,20 @@
             this.tbarData.Size = new System.Drawing.Size(23, 22);
             this.tbarData.Text = "数据维护";
             // 
-            // menuFileExit
+            // mnuDataGraph
             // 
-            this.menuFileExit.Name = "menuFileExit";
-            this.menuFileExit.Size = new System.Drawing.Size(152, 22);
-            this.menuFileExit.Text = "退出";
+            this.mnuDataGraph.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDataGraphStatisLastFive});
+            this.mnuDataGraph.Name = "mnuDataGraph";
+            this.mnuDataGraph.Size = new System.Drawing.Size(65, 20);
+            this.mnuDataGraph.Text = "数据图表";
+            // 
+            // mnuDataGraphStatisLastFive
+            // 
+            this.mnuDataGraphStatisLastFive.Name = "mnuDataGraphStatisLastFive";
+            this.mnuDataGraphStatisLastFive.Size = new System.Drawing.Size(152, 22);
+            this.mnuDataGraphStatisLastFive.Text = "统计最近五期";
+            this.mnuDataGraphStatisLastFive.Click += new System.EventHandler(this.mnuDataGraphStatisLastFive_Click);
             // 
             // frmMain
             // 
@@ -156,6 +174,8 @@
         private System.Windows.Forms.ToolStripButton tbarData;
         private System.Windows.Forms.ToolStripMenuItem menuFile;
         private System.Windows.Forms.ToolStripMenuItem menuFileExit;
+        private System.Windows.Forms.ToolStripMenuItem mnuDataGraph;
+        private System.Windows.Forms.ToolStripMenuItem mnuDataGraphStatisLastFive;
     }
 }
 
