@@ -27,5 +27,7 @@ namespace Lottery
         {
             SystemCommon.UpdateLotteryData();
         }
+
+        
     }
 }
