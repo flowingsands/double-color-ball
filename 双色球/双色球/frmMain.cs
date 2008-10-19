@@ -28,6 +28,11 @@ namespace Lottery
             SystemCommon.UpdateLotteryData();
         }
 
+        private void mnuDataGraphStatisLastFive_Click(object sender, EventArgs e)
+        {
+            SystemCommon.StatisticLastFiveData();
+        }
+
         
     }
 }

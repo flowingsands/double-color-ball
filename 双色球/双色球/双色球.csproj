@@ -53,6 +53,8 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Object\Rule.cs" />
+    <Compile Include="Object\TableObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
@@ -78,9 +80,6 @@
     </Compile>
     <Compile Include="Socket\Socket.cs" />
     <Compile Include="SystemCommon.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Object\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

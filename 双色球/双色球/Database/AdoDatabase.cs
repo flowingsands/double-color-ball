@@ -275,13 +275,7 @@ namespace Lottery
                     cmd.Parameters.Add(parm);
             }
         }
-    }
-    #endregion
 
-    #region Mysql表操作
-
-    public class TableFlIssue : BaseMySqlServer
-    {
         public void DataUpdate(string strResult)
         {
             string[] stringArray = strResult.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
@@ -290,12 +284,36 @@ namespace Lottery
                 ExecuteNonQuery(CommandType.Text, query + ";", null);
             }
 
-        }
+        }   
+    }
+    #endregion
+
+    #region Mysql表操作
+
+    public class TableFlIssue : BaseMySqlServer
+    {
 
         public DataTable GetTableDataByDesc()
         {
             string query = "SELECT `LotIssue`,`EndTime`,`Result`,`Result2`,`Sale`,`Count1`,`Bonus1`,`Count2`,`Bonus2`,`Count3`,`Bonus3` FROM fl_issue order by lotissue desc;";
             return this.GetDataTable(CommandType.Text, query, null);
+        }
+
+        public IList<FlIssue> GetTableDataToList()
+        {
+            IList<FlIssue> list = new List<FlIssue>();
+            string query = "SELECT `LotIssue`,`EndTime`,`Result`,`Result2`,`Bonus1`,`Bonus2`,`Bonus3`,`Sale`,`Count1`,`Count2`,`Count3` FROM fl_issue order by lotissue desc;";
+            MySqlDataReader rdr = null;
+
+            rdr = ExecuteReader(CommandType.Text, query, null);
+            while (rdr.Read())
+            {
+                Console.WriteLine(rdr.GetString(0));
+                list.Add(new FlIssue(rdr.GetString(0), rdr.GetDateTime(1), rdr.GetString(2), rdr.GetString(3), rdr.GetInt32(4), rdr.GetInt32(5), rdr.GetInt32(6), rdr.GetInt32(7), rdr.GetInt32(8), rdr.GetInt32(9), rdr.GetInt32(10)));
+            }
+            rdr.Close();
+            return list;
+
         }
 
         /*
@@ -354,6 +372,10 @@ namespace Lottery
 
     }
 
+    public class TableLastFiveIssue : BaseMySqlServer
+    {
+        
+    }
    
     
 
