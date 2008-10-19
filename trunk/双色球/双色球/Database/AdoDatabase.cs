@@ -291,6 +291,13 @@ namespace Lottery
             }
 
         }
+
+        public DataTable GetTableDataByDesc()
+        {
+            string query = "SELECT `LotIssue`,`EndTime`,`Result`,`Result2`,`Sale`,`Count1`,`Bonus1`,`Count2`,`Bonus2`,`Count3`,`Bonus3` FROM fl_issue order by lotissue desc;";
+            return this.GetDataTable(CommandType.Text, query, null);
+        }
+
         /*
         public void GetTableData1()
         {

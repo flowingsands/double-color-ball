@@ -28,19 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.mnuMain = new System.Windows.Forms.MenuStrip();
+            this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuData = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataAwardUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataLotteryUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataLotteryRefresh = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataHistoryUpdate = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuDataOnlineUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tbarData = new System.Windows.Forms.ToolStripButton();
+            this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuMain
             // 
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuFile,
             this.mnuData});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
@@ -48,14 +54,21 @@
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "mnuMain";
             // 
+            // menuFile
+            // 
+            this.menuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuFileExit});
+            this.menuFile.Name = "menuFile";
+            this.menuFile.Size = new System.Drawing.Size(41, 20);
+            this.menuFile.Text = "文件";
+            // 
             // mnuData
             // 
             this.mnuData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuDataAwardUpdate,
             this.mnuDataLotteryUpdate,
             this.mnuDataLotteryRefresh,
-            this.mnuDataHistoryUpdate,
-            this.mnuDataOnlineUpdate});
+            this.mnuDataHistoryUpdate});
             this.mnuData.Name = "mnuData";
             this.mnuData.Size = new System.Drawing.Size(65, 20);
             this.mnuData.Text = "数据更新";
@@ -86,16 +99,37 @@
             this.mnuDataHistoryUpdate.Size = new System.Drawing.Size(142, 22);
             this.mnuDataHistoryUpdate.Text = "历史数据更新";
             // 
-            // mnuDataOnlineUpdate
+            // toolStrip1
             // 
-            this.mnuDataOnlineUpdate.Name = "mnuDataOnlineUpdate";
-            this.mnuDataOnlineUpdate.Size = new System.Drawing.Size(142, 22);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tbarData});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(593, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tbarData
+            // 
+            this.tbarData.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbarData.Image = ((System.Drawing.Image)(resources.GetObject("tbarData.Image")));
+            this.tbarData.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbarData.Name = "tbarData";
+            this.tbarData.Size = new System.Drawing.Size(23, 22);
+            this.tbarData.Text = "数据维护";
+            // 
+            // menuFileExit
+            // 
+            this.menuFileExit.Name = "menuFileExit";
+            this.menuFileExit.Size = new System.Drawing.Size(152, 22);
+            this.menuFileExit.Text = "退出";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 348);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.mnuMain);
             this.MainMenuStrip = this.mnuMain;
             this.Name = "frmMain";
@@ -103,6 +137,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,7 +152,10 @@
         private System.Windows.Forms.ToolStripMenuItem mnuDataLotteryUpdate;
         private System.Windows.Forms.ToolStripMenuItem mnuDataLotteryRefresh;
         private System.Windows.Forms.ToolStripMenuItem mnuDataHistoryUpdate;
-        private System.Windows.Forms.ToolStripMenuItem mnuDataOnlineUpdate;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tbarData;
+        private System.Windows.Forms.ToolStripMenuItem menuFile;
+        private System.Windows.Forms.ToolStripMenuItem menuFileExit;
     }
 }
 
