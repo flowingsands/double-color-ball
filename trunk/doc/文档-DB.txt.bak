@@ -1,0 +1,86 @@
+DROP TABLE IF EXISTS `doublecolorball`.`fl_issue`;
+CREATE TABLE  `doublecolorball`.`fl_issue` (
+  `LotIssue` char(7) NOT NULL,
+  `StartTime` datetime default NULL,
+  `EndTime` datetime default NULL,
+  `Result` char(17) default '',
+  `Result2` char(2) default '',
+  `Result3` char(17) default '',
+  `Bonus1` int(10) unsigned default '0',
+  `Bonus2` int(10) unsigned default '0',
+  `Bonus3` int(10) unsigned default '0',
+  `Sale` int(10) unsigned default '0',
+  `Count1` int(10) unsigned default '0',
+  `Count2` int(10) unsigned default '0',
+  `Count3` int(10) unsigned default '0',
+  `Memo` text,
+  PRIMARY KEY  (`LotIssue`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS `doublecolorball`.`lastfive_issue`;
+CREATE TABLE  `doublecolorball`.`fl_issue` (
+  `LotIssue` char(7) NOT NULL,
+  `Result1` char(17) default '',
+  `Result2` char(2) default '',
+  `Result3` char(17) default '',
+  `Bonus1` int(10) unsigned default '0',
+  `Bonus2` int(10) unsigned default '0',
+  `Bonus3` int(10) unsigned default '0',
+  `Sale` int(10) unsigned default '0',
+  `Count1` int(10) unsigned default '0',
+  `Count2` int(10) unsigned default '0',
+  `Count3` int(10) unsigned default '0',
+  `Memo` text,
+  PRIMARY KEY  (`LotIssue`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `doublecolorball`.`lastfive_issue`;
+CREATE TABLE  `doublecolorball`.`lastfive_issue` (
+  `LotIssue0` char(7) NOT NULL,
+  `Result0` char(20) default '',
+  `LotIssue1` char(20) default '',
+  `Result1` char(20) default '',
+  `CountResult1` char(255) default NULL,
+  `Count1` int(11) default NULL,
+  `LotIssue2` char(20) default '',
+  `Result2` char(20) default '',
+  `CountResult2` char(255) default NULL,
+  `Count2` int(11) default NULL,
+  `LotIssue3` char(20) default '',
+  `Result3` char(20) default '',
+  `CountResult3` char(255) default NULL,
+  `Count3` int(11) default NULL,
+  `LotIssue4` char(20) default '',
+  `Result4` char(20) default '',
+  `CountResult4` char(255) default NULL,
+  `Count4` int(11) default NULL,
+  `LotIssue5` char(7) default '',
+  `Result5` char(20) default '',
+  `CountResult5` char(255) default NULL,
+  `Count5` int(11) default NULL,
+  PRIMARY KEY  (`LotIssue`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS `doublecolorball`.`fl_issue`;
+CREATE TABLE  `doublecolorball`.`fl_issue` (
+  `LotIssue` char(7) NOT NULL,
+  `StartTime` datetime default NULL,
+  `EndTime` datetime default NULL,
+  `Result` char(17) default '',
+  `Result2` char(2) default '',
+  `Result3` char(17) default '',
+  `Bonus1` int(10) unsigned default '0',
+  `Bonus2` int(10) unsigned default '0',
+  `Bonus3` int(10) unsigned default '0',
+  `Sale` int(10) unsigned default '0',
+  `Count1` int(10) unsigned default '0',
+  `Count2` int(10) unsigned default '0',
+  `Count3` int(10) unsigned default '0',
+  `Memo` text,
+  PRIMARY KEY  (`LotIssue`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
