@@ -6,6 +6,8 @@
  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Techie</LastAuthor>
+  <LastSaved>2008-10-19T22:40:45Z</LastSaved>
   <Version>11.9999</Version>
  </DocumentProperties>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
@@ -274,8 +276,7 @@
    <Row>
     <Cell><Data ss:Type="String">2008124</Data></Cell>
     <Cell><Data ss:Type="String">2008-10-21 00:00:00</Data></Cell>
-    <Cell><Data ss:Type="String"></Data></Cell>
-    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String"></Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
@@ -10612,8 +10613,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveCol>11</ActiveCol>
-     <RangeSelection>C12</RangeSelection>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
