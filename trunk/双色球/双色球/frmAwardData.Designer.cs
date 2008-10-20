@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlLotteryData = new System.Windows.Forms.Panel();
-            this.tabLotteryData = new System.Windows.Forms.TabControl();
-            this.tabRedData = new System.Windows.Forms.TabPage();
             this.labAddSign = new System.Windows.Forms.Label();
             this.txtBlueData = new System.Windows.Forms.TextBox();
             this.txtSecondAward = new System.Windows.Forms.TextBox();
+            this.tabLotteryData = new System.Windows.Forms.TabControl();
+            this.tabAwardData = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFirstAward = new System.Windows.Forms.TextBox();
             this.labFirstAward = new System.Windows.Forms.Label();
@@ -43,50 +42,10 @@
             this.labLotterNumber = new System.Windows.Forms.Label();
             this.dgvAwardData = new System.Windows.Forms.DataGridView();
             this.tabLastFiveData = new System.Windows.Forms.TabPage();
-            this.pnlLotteryData.SuspendLayout();
             this.tabLotteryData.SuspendLayout();
-            this.tabRedData.SuspendLayout();
+            this.tabAwardData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwardData)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlLotteryData
-            // 
-            this.pnlLotteryData.Controls.Add(this.tabLotteryData);
-            this.pnlLotteryData.Location = new System.Drawing.Point(12, 12);
-            this.pnlLotteryData.Name = "pnlLotteryData";
-            this.pnlLotteryData.Size = new System.Drawing.Size(603, 435);
-            this.pnlLotteryData.TabIndex = 0;
-            // 
-            // tabLotteryData
-            // 
-            this.tabLotteryData.Controls.Add(this.tabRedData);
-            this.tabLotteryData.Controls.Add(this.tabLastFiveData);
-            this.tabLotteryData.Location = new System.Drawing.Point(3, 0);
-            this.tabLotteryData.Name = "tabLotteryData";
-            this.tabLotteryData.SelectedIndex = 0;
-            this.tabLotteryData.Size = new System.Drawing.Size(600, 435);
-            this.tabLotteryData.TabIndex = 0;
-            // 
-            // tabRedData
-            // 
-            this.tabRedData.BackColor = System.Drawing.SystemColors.Control;
-            this.tabRedData.Controls.Add(this.labAddSign);
-            this.tabRedData.Controls.Add(this.txtBlueData);
-            this.tabRedData.Controls.Add(this.txtSecondAward);
-            this.tabRedData.Controls.Add(this.label2);
-            this.tabRedData.Controls.Add(this.txtFirstAward);
-            this.tabRedData.Controls.Add(this.labFirstAward);
-            this.tabRedData.Controls.Add(this.txtAwardData);
-            this.tabRedData.Controls.Add(this.labAwardData);
-            this.tabRedData.Controls.Add(this.txtLotteryNum);
-            this.tabRedData.Controls.Add(this.labLotterNumber);
-            this.tabRedData.Controls.Add(this.dgvAwardData);
-            this.tabRedData.Location = new System.Drawing.Point(4, 21);
-            this.tabRedData.Name = "tabRedData";
-            this.tabRedData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRedData.Size = new System.Drawing.Size(592, 410);
-            this.tabRedData.TabIndex = 0;
-            this.tabRedData.Text = "彩票期号与开奖";
             // 
             // labAddSign
             // 
@@ -110,6 +69,37 @@
             this.txtSecondAward.Name = "txtSecondAward";
             this.txtSecondAward.Size = new System.Drawing.Size(165, 21);
             this.txtSecondAward.TabIndex = 4;
+            // 
+            // tabLotteryData
+            // 
+            this.tabLotteryData.Controls.Add(this.tabAwardData);
+            this.tabLotteryData.Controls.Add(this.tabLastFiveData);
+            this.tabLotteryData.Location = new System.Drawing.Point(12, 12);
+            this.tabLotteryData.Name = "tabLotteryData";
+            this.tabLotteryData.SelectedIndex = 0;
+            this.tabLotteryData.Size = new System.Drawing.Size(602, 402);
+            this.tabLotteryData.TabIndex = 1;
+            // 
+            // tabAwardData
+            // 
+            this.tabAwardData.BackColor = System.Drawing.SystemColors.Control;
+            this.tabAwardData.Controls.Add(this.labAddSign);
+            this.tabAwardData.Controls.Add(this.txtBlueData);
+            this.tabAwardData.Controls.Add(this.txtSecondAward);
+            this.tabAwardData.Controls.Add(this.label2);
+            this.tabAwardData.Controls.Add(this.txtFirstAward);
+            this.tabAwardData.Controls.Add(this.labFirstAward);
+            this.tabAwardData.Controls.Add(this.txtAwardData);
+            this.tabAwardData.Controls.Add(this.labAwardData);
+            this.tabAwardData.Controls.Add(this.txtLotteryNum);
+            this.tabAwardData.Controls.Add(this.labLotterNumber);
+            this.tabAwardData.Controls.Add(this.dgvAwardData);
+            this.tabAwardData.Location = new System.Drawing.Point(4, 21);
+            this.tabAwardData.Name = "tabAwardData";
+            this.tabAwardData.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAwardData.Size = new System.Drawing.Size(594, 377);
+            this.tabAwardData.TabIndex = 0;
+            this.tabAwardData.Text = "彩票期号与开奖";
             // 
             // label2
             // 
@@ -170,11 +160,13 @@
             // 
             // dgvAwardData
             // 
+            this.dgvAwardData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvAwardData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAwardData.Location = new System.Drawing.Point(0, 161);
+            this.dgvAwardData.Location = new System.Drawing.Point(-1, 129);
+            this.dgvAwardData.Margin = new System.Windows.Forms.Padding(12);
             this.dgvAwardData.Name = "dgvAwardData";
             this.dgvAwardData.RowTemplate.Height = 23;
-            this.dgvAwardData.Size = new System.Drawing.Size(590, 249);
+            this.dgvAwardData.Size = new System.Drawing.Size(590, 240);
             this.dgvAwardData.TabIndex = 0;
             this.dgvAwardData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAwardData_RowHeaderMouseClick);
             this.dgvAwardData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAwardData_CellContentClick);
@@ -185,7 +177,7 @@
             this.tabLastFiveData.Location = new System.Drawing.Point(4, 21);
             this.tabLastFiveData.Name = "tabLastFiveData";
             this.tabLastFiveData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLastFiveData.Size = new System.Drawing.Size(592, 410);
+            this.tabLastFiveData.Size = new System.Drawing.Size(594, 377);
             this.tabLastFiveData.TabIndex = 1;
             this.tabLastFiveData.Text = "最近五期数据统计";
             // 
@@ -194,16 +186,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 458);
-            this.Controls.Add(this.pnlLotteryData);
+            this.Controls.Add(this.tabLotteryData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmLotteryData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "彩票数据维护";
             this.Load += new System.EventHandler(this.FrmLotteryData_Load);
-            this.pnlLotteryData.ResumeLayout(false);
+            this.Resize += new System.EventHandler(this.FrmLotteryData_Resize);
             this.tabLotteryData.ResumeLayout(false);
-            this.tabRedData.ResumeLayout(false);
-            this.tabRedData.PerformLayout();
+            this.tabAwardData.ResumeLayout(false);
+            this.tabAwardData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwardData)).EndInit();
             this.ResumeLayout(false);
 
@@ -211,20 +203,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlLotteryData;
-        private System.Windows.Forms.TabControl tabLotteryData;
-        private System.Windows.Forms.TabPage tabRedData;
-        private System.Windows.Forms.TabPage tabLastFiveData;
-        private System.Windows.Forms.DataGridView dgvAwardData;
-        private System.Windows.Forms.Label labLotterNumber;
-        private System.Windows.Forms.TextBox txtLotteryNum;
-        private System.Windows.Forms.TextBox txtAwardData;
-        private System.Windows.Forms.Label labAwardData;
-        private System.Windows.Forms.TextBox txtBlueData;
         private System.Windows.Forms.Label labAddSign;
+        private System.Windows.Forms.TextBox txtBlueData;
+        private System.Windows.Forms.TextBox txtSecondAward;
+        private System.Windows.Forms.TabControl tabLotteryData;
+        private System.Windows.Forms.TabPage tabAwardData;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFirstAward;
         private System.Windows.Forms.Label labFirstAward;
-        private System.Windows.Forms.TextBox txtSecondAward;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtAwardData;
+        private System.Windows.Forms.Label labAwardData;
+        private System.Windows.Forms.TextBox txtLotteryNum;
+        private System.Windows.Forms.Label labLotterNumber;
+        private System.Windows.Forms.DataGridView dgvAwardData;
+        private System.Windows.Forms.TabPage tabLastFiveData;
+
+
     }
 }
