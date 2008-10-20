@@ -42,9 +42,12 @@
             this.labLotterNumber = new System.Windows.Forms.Label();
             this.dgvAwardData = new System.Windows.Forms.DataGridView();
             this.tabLastFiveData = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabLotteryData.SuspendLayout();
             this.tabAwardData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwardData)).BeginInit();
+            this.tabLastFiveData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labAddSign
@@ -174,12 +177,22 @@
             // tabLastFiveData
             // 
             this.tabLastFiveData.BackColor = System.Drawing.SystemColors.Control;
+            this.tabLastFiveData.Controls.Add(this.dataGridView1);
             this.tabLastFiveData.Location = new System.Drawing.Point(4, 21);
             this.tabLastFiveData.Name = "tabLastFiveData";
             this.tabLastFiveData.Padding = new System.Windows.Forms.Padding(3);
             this.tabLastFiveData.Size = new System.Drawing.Size(594, 377);
             this.tabLastFiveData.TabIndex = 1;
             this.tabLastFiveData.Text = "最近五期数据统计";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 168);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(501, 192);
+            this.dataGridView1.TabIndex = 0;
             // 
             // FrmLotteryData
             // 
@@ -197,6 +210,8 @@
             this.tabAwardData.ResumeLayout(false);
             this.tabAwardData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwardData)).EndInit();
+            this.tabLastFiveData.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,6 +232,7 @@
         private System.Windows.Forms.Label labLotterNumber;
         private System.Windows.Forms.DataGridView dgvAwardData;
         private System.Windows.Forms.TabPage tabLastFiveData;
+        private System.Windows.Forms.DataGridView dataGridView1;
 
 
     }

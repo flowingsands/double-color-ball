@@ -100,6 +100,10 @@ namespace Lottery
         {
             tabLotteryData.Height = this.Height - 80;
             tabLotteryData.Width = this.Width - 30;
+
+            dgvAwardData.Height = tabLotteryData.Height - 240;
+            dgvAwardData.Width = tabLotteryData.Width - 40;
+            //dgvAwardData.ScrollBars = ScrollBars.Both;
         }
     }
 }
