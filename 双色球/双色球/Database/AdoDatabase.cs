@@ -299,6 +299,14 @@ namespace Lottery
             return this.GetDataTable(CommandType.Text, query, null);
         }
 
+        public DataTable GetTableDataForMaintenceForm()
+        {
+            //string query = "SELECT `LotIssue` as '彩票期号',`EndTime` as '开奖日期',`Result` as '红球',`Result2` as '蓝球',`Sale` as '销售金额',`Count1` as '一等奖',`Bonus1` as '奖金',`Count2` as '二等奖',`Bonus2` as '奖金' FROM fl_issue order by lotissue desc;";
+            string query = "SELECT `LotIssue`,`EndTime`,`Result`,`Result2`,`Sale`,`Count1`,`Bonus1`,`Count2`,`Bonus2` FROM fl_issue order by lotissue desc;";
+
+            return this.GetDataTable(CommandType.Text, query, null);
+        }
+
         public IList<FlIssue> GetTableDataToList()
         {
             IList<FlIssue> list = new List<FlIssue>();

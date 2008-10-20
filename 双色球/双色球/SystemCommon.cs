@@ -6,6 +6,9 @@ using System.Net.Sockets;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Linq;
+using System.Data;
+
 
 namespace Lottery
 {
@@ -149,6 +152,17 @@ namespace Lottery
 
         }
 
+        public static DataTable GetAwardDataTable()
+        {
+            DataTable dataTable = null;
+
+            using (TableFlIssue tabFlIssue = new TableFlIssue())
+            {
+                dataTable = tabFlIssue.GetTableDataForMaintenceForm();
+            }
+
+            return dataTable;
+        }
         public static void ExitApp()
         {
             if (MessageBox.Show("确定关闭系统吗？", "关闭确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
