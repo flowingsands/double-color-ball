@@ -376,7 +376,11 @@ namespace Lottery
     {
         
     }
-   
+
+    public class TableRangeIssue : BaseMySqlServer
+    {
+
+    }
     
 
     #endregion

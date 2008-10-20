@@ -4,10 +4,17 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
-
 namespace Lottery
 {
+    class IntCompare : System.Collections.IComparer
+    {
 
+        public int Compare(object x, object y)
+        {
+            return (int)x - (int)y;
+        }
+
+    } 
 
     public class AwardNumber
     {
@@ -73,5 +80,148 @@ namespace Lottery
         }
     }
 
+    public class RangeNumber
+    {
+        private ArrayList[] redData;
+
+        public enum ActionTypeEnum
+        {
+            First, 
+            Second,  
+            Third,    
+            Fourth,
+            Fifth,
+        }
+
+        public RangeNumber()
+        {
+            redData = new ArrayList[]{ new ArrayList(), /* 待统计数字字符串 */
+                                       new ArrayList(), /* 区间1: 01-03 */
+                                       new ArrayList(), /* 区间2: 04-07 */
+                                       new ArrayList(), /* 区间3: 08-12 */
+                                       new ArrayList(), /* 区间4: 13-20 */
+                                       new ArrayList()  /* 区间5: 21-33 */
+                                    };
+        }
+
+        public void Anlysis(string number)
+        {
+            Set(number);
+            Anlysis();
+        }
+
+        private void Set(string number1)
+        {
+            string[] numberArray1 = number1.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+  
+            foreach (string number in numberArray1)
+            {
+                Int32 num = Convert.ToInt32(number);
+                if (redData[0].IndexOf(num) < 0)              
+                {
+                    redData[0].Add(num);
+                }
+            }
+            redData[0].Sort(new IntCompare());
+        }
+
+        private void Anlysis()
+        {
+            foreach (int number in redData[0])
+            {
+                switch (number)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                        redData[1].Add(number);
+                        break;
+
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                        redData[2].Add(number);
+                        break;
+
+                    case 8:
+                    case 9:
+                    case 10:
+                    case 11:
+                    case 12:
+                        redData[3].Add(number);
+                        break;
+     
+                    case 13:
+                    case 14:
+                    case 15:
+                    case 16:
+                    case 17:
+                    case 18:
+                    case 19:
+                    case 20:
+                        redData[4].Add(number);
+                        break;
+
+
+                    case 21:
+                    case 22:
+                    case 23:
+                    case 24:
+                    case 25:
+                    case 26:
+                    case 27:
+                    case 28:
+                    case 29:
+                    case 30:
+                    case 31:
+                    case 32:
+                    case 33:
+                        redData[5].Add(number);
+                        break;
+                }
+            }
+        }
+
+        public string[] GetResult()
+        {
+            string[] rutString = new string[6];
+
+            for( int i = 0; i < 6; i++ )
+            {
+                rutString[i] = GetRedData(i);
+            }
+            return rutString;
+        }
+
+        private string GetRedData(int i)
+        {
+            string result = string.Empty;
+            int j = 0;
+            foreach (int number in redData[i])
+            {
+                if (j++ == 0)
+                    result += string.Format("{0:D2}", number);
+                else
+                    result += string.Format(" {0:D2}", number);
+
+            }
+            return result;
+        }
+
+        public int[] GetCount()
+        {
+            int[] rutInt = new int[5];
+            for (int i = 1; i < 6; i++)
+            {
+                rutInt[i - 1] = redData[i].Count;
+            }
+
+            return rutInt;
+        }
+
+        
+
+    }
 
 }

@@ -597,6 +597,311 @@ namespace Lottery
             }
         }
 
+        public string UpdateMysqlString
+        {
+            get
+            {
+                string rutString = "INSERT lastfive_issue(LotIssue0,Result0) VALUE"
+                                   + "('" + lotIssue0 + "','" + result0 + "');\r\n";
+
+                rutString += "UPDATE lastfive_issue SET "
+                            + "LotIssue1=" + "'" + lotIssue1 + "'," + "Result1=" + "'" + result1 + "'," + "CountResult1=" + "'" + countResult1 + "'," + "Count1=" + count1 + ","
+                            + "LotIssue2=" + "'" + lotIssue2 + "'," + "Result2=" + "'" + result2 + "'," + "CountResult2=" + "'" + countResult2 + "'," + "Count2=" + count2 + ","
+                            + "LotIssue3=" + "'" + lotIssue3 + "'," + "Result3=" + "'" + result3 + "'," + "CountResult3=" + "'" + countResult3 + "'," + "Count3=" + count3 + ","
+                            + "LotIssue4=" + "'" + lotIssue4 + "'," + "Result4=" + "'" + result4 + "'," + "CountResult4=" + "'" + countResult4 + "'," + "Count4=" + count4 + ","
+                            + "LotIssue5=" + "'" + lotIssue5 + "'," + "Result5=" + "'" + result5 + "'," + "CountResult5=" + "'" + countResult5 + "'," + "Count5=" + count5 
+                            + " WHERE LotIssue0=" + "'" + lotIssue0 + "'" + ";";
+                return rutString;
+            }
+        }
+    }
+   
+    public class RangeIssue
+    {
+        private string lotIssue0;
+        private string result0;
+        private string result1;
+
+        private string range1;
+        private string countRange1;
+        private int count1;
+
+        private string range2;
+        private string countRange2;
+        private int count2;
+
+        private string range3;
+        private string countRange3;
+        private int count3;
+
+        private string range4;
+        private string countRange4;
+        private int count4;
+
+        private string range5;
+        private string countRange5;
+        private int count5;
+
+
+        public RangeIssue(string LotIssue0, string Result0, string Result1,
+                             string Range1, string CountRange1,  int Count1,
+                             string Range2, string CountRange2, int Count2,
+                             string Range3, string CountRange3, int Count3,
+                             string Range4, string CountRange4, int Count4,
+                             string Range5, string CountRange5,  int Count5)
+        {
+            lotIssue0 = LotIssue0;
+            result0 = Result0;
+            result1 = Result1;
+
+            range1 = Range1;
+            countRange1 = CountRange1;
+            count1 = Count1;
+
+            range2 = Range2;
+            countRange2 = CountRange2;
+            count2 = Count2;
+
+            range3 = Range3;
+            countRange3 = CountRange3;
+            count3 = Count3;
+
+            range4 = Range4;
+            countRange1 = CountRange4;
+            count4 = Count4;
+
+            range5 = Range5;
+            countRange5 = CountRange5;
+            count5 = Count5;
+
+        }
+
+        public string LotIssue0
+        {
+            get
+            {
+                return lotIssue0;
+            }
+            set
+            {
+                lotIssue0 = value;
+            }
+        }
+        public string Result0
+        {
+            get
+            {
+                return result0;
+            }
+            set
+            {
+                result0 = value;
+            }
+        }
+
+        public string Range1
+        {
+            get
+            {
+                return range1;
+            }
+            set
+            {
+                range1 = value;
+            }
+        }        
+        public string CountRange1
+        {
+            get
+            {
+                return countRange1;
+            }
+            set
+            {
+                countRange1 = value;
+            }
+        }
+        public int Count1
+        {
+            get
+            {
+                return count1;
+            }
+            set
+            {
+                count1 = value;
+            }
+        }
+
+        public string Range2
+        {
+            get
+            {
+                return range2;
+            }
+            set
+            {
+                range2 = value;
+            }
+        }
+        public string CountRange2
+        {
+            get
+            {
+                return countRange2;
+            }
+            set
+            {
+                countRange2 = value;
+            }
+        }
+        public int Count2
+        {
+            get
+            {
+                return count2;
+            }
+            set
+            {
+                count2 = value;
+            }
+        }
+        public string Range3
+        {
+            get
+            {
+                return range3;
+            }
+            set
+            {
+                range3 = value;
+            }
+        }
+        public string CountRange3
+        {
+            get
+            {
+                return countRange3;
+            }
+            set
+            {
+                countRange3 = value;
+            }
+        }
+        public int Count3
+        {
+            get
+            {
+                return count3;
+            }
+            set
+            {
+                count3 = value;
+            }
+        }
+        public string Range4
+        {
+            get
+            {
+                return range4;
+            }
+            set
+            {
+                range4 = value;
+            }
+        }
+        public string CountRange4
+        {
+            get
+            {
+                return countRange4;
+            }
+            set
+            {
+                countRange4 = value;
+            }
+        }
+        public int Count4
+        {
+            get
+            {
+                return count4;
+            }
+            set
+            {
+                count4 = value;
+            }
+        }
+        public string Range5
+        {
+            get
+            {
+                return range5;
+            }
+            set
+            {
+                range5 = value;
+            }
+        }
+        public string CountRange5
+        {
+            get
+            {
+                return countRange5;
+            }
+            set
+            {
+                countRange5 = value;
+            }
+        }
+        public int Count5
+        {
+            get
+            {
+                return count5;
+            }
+            set
+            {
+                count5 = value;
+            }
+        }
+      
+        public string InsertMysqlString
+        {
+            get
+            {
+                string rutString = "INSERT range_issue(LotIssue0,Result0,Result1,Range1,CountRange1,Count1,Range2,CountRange2,Count2,Range3,CountRange3,Count3,Range4,CountRange4,Count4,Range5,CountRange5,Count5) VALUE"
+                                   + "('" + lotIssue0 + "','" + result0 + "','" + result1 + "',"
+                                   + "'" + range1 + "'," + "'" + countRange1 + "'," + count1 + ","
+                                   + "'" + range2 + "'," + "'" + countRange2 + "'," + count2 + ","
+                                   + "'" + range3 + "'," + "'" + countRange3 + "'," + count3 + ","
+                                   + "'" + range4 + "'," + "'" + countRange4 + "'," + count4 + ","
+                                   + "'" + range5 + "'," + "'" + countRange5 + "'," + count5 + ")";
+
+
+                return rutString;
+            }
+        }
+
+        public string UpdateMysqlString
+        {
+            get
+            {
+                string rutString = "INSERT range_issue(LotIssue0,Result0) VALUE"
+                                   + "('" + lotIssue0 + "','" + result0 + "');\r\n";
+
+                rutString += "UPDATE range_issue SET "
+                            + "Result1=" + "'" + result1 + "',"
+                            + "Range1=" + "'" + range1 + "'," + "CountRange1=" + "'" + countRange1 + "'," + "Count1=" + count1 + ","
+                            + "Range2=" + "'" + range2 + "'," + "CountRange2=" + "'" + countRange2 + "'," + "Count2=" + count2 + ","
+                            + "Range3=" + "'" + range3 + "'," + "CountRange3=" + "'" + countRange3 + "'," + "Count3=" + count3 + ","
+                            + "Range4=" + "'" + range4 + "'," + "CountRange4=" + "'" + countRange4 + "'," + "Count4=" + count4 + ","
+                            + "Range5=" + "'" + range5 + "'," + "CountRange5=" + "'" + countRange5 + "'," + "Count5=" + count5
+                            + " WHERE LotIssue0=" + "'" + lotIssue0 + "'" + ";"; 
+                return rutString;
+            }
+        }
+
     }
 
 }

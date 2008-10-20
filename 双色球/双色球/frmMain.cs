@@ -33,6 +33,11 @@ namespace Lottery
             SystemCommon.StatisticLastFiveData();
         }
 
+        private void mnuDataGraphRange_Click(object sender, EventArgs e)
+        {
+            SystemCommon.StatisticRangeData();
+        }
+
         
     }
 }

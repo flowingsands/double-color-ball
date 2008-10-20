@@ -47,3 +47,25 @@ CREATE TABLE  `doublecolorball`.`lastfive_issue` (
   PRIMARY KEY  (`LotIssue`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `doublecolorball`.`range_issue`;
+CREATE TABLE  `doublecolorball`.`range_issue` (
+  `LotIssue0` char(7) NOT NULL,
+  `Result0` char(20) default '',
+  `Result1` char(255) default NULL,
+  `Range1` char(255) default NULL,
+  `CountRange1` char(255) default NULL,
+  `Count1` int(11) default NULL,
+  `Range2` char(255) default NULL,
+  `CountRange2` char(255) default NULL,
+  `Count2` int(11) default NULL,
+  `Range3` char(255) default NULL,
+  `CountRange3` char(255) default NULL,
+  `Count3` int(11) default NULL,
+  `Range4` char(255) default NULL,
+  `CountRange4` char(255) default NULL,
+  `Count4` int(11) default NULL,
+  `Range5` char(255) default NULL,
+  `CountRange5` char(255) default NULL,
+  `Count5` int(11) default NULL,
+  PRIMARY KEY  (`LotIssue0`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
