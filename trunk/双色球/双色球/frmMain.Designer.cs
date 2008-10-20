@@ -39,9 +39,9 @@
             this.mnuDataHistoryUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataGraph = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataGraphStatisLastFive = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tbarData = new System.Windows.Forms.ToolStripButton();
             this.mnuDataGraphRange = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tbarLotteryDataMaintenance = new System.Windows.Forms.ToolStripButton();
             this.mnuMain.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,8 +69,9 @@
             // menuFileExit
             // 
             this.menuFileExit.Name = "menuFileExit";
-            this.menuFileExit.Size = new System.Drawing.Size(94, 22);
+            this.menuFileExit.Size = new System.Drawing.Size(152, 22);
             this.menuFileExit.Text = "退出";
+            this.menuFileExit.Click += new System.EventHandler(this.menuFileExit_Click);
             // 
             // mnuData
             // 
@@ -121,35 +122,36 @@
             // mnuDataGraphStatisLastFive
             // 
             this.mnuDataGraphStatisLastFive.Name = "mnuDataGraphStatisLastFive";
-            this.mnuDataGraphStatisLastFive.Size = new System.Drawing.Size(152, 22);
+            this.mnuDataGraphStatisLastFive.Size = new System.Drawing.Size(142, 22);
             this.mnuDataGraphStatisLastFive.Text = "统计最近五期";
             this.mnuDataGraphStatisLastFive.Click += new System.EventHandler(this.mnuDataGraphStatisLastFive_Click);
+            // 
+            // mnuDataGraphRange
+            // 
+            this.mnuDataGraphRange.Name = "mnuDataGraphRange";
+            this.mnuDataGraphRange.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataGraphRange.Text = "红球数据分区";
+            this.mnuDataGraphRange.Click += new System.EventHandler(this.mnuDataGraphRange_Click);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tbarData});
+            this.tbarLotteryDataMaintenance});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(593, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // tbarData
+            // tbarLotteryDataMaintenance
             // 
-            this.tbarData.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbarData.Image = ((System.Drawing.Image)(resources.GetObject("tbarData.Image")));
-            this.tbarData.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbarData.Name = "tbarData";
-            this.tbarData.Size = new System.Drawing.Size(23, 22);
-            this.tbarData.Text = "数据维护";
-            // 
-            // mnuDataGraphRange
-            // 
-            this.mnuDataGraphRange.Name = "mnuDataGraphRange";
-            this.mnuDataGraphRange.Size = new System.Drawing.Size(152, 22);
-            this.mnuDataGraphRange.Text = "红球数据分区";
-            this.mnuDataGraphRange.Click += new System.EventHandler(this.mnuDataGraphRange_Click);
+            this.tbarLotteryDataMaintenance.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbarLotteryDataMaintenance.Image = ((System.Drawing.Image)(resources.GetObject("tbarLotteryDataMaintenance.Image")));
+            this.tbarLotteryDataMaintenance.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbarLotteryDataMaintenance.Name = "tbarLotteryDataMaintenance";
+            this.tbarLotteryDataMaintenance.Size = new System.Drawing.Size(23, 22);
+            this.tbarLotteryDataMaintenance.Text = "数据维护";
+            this.tbarLotteryDataMaintenance.Click += new System.EventHandler(this.tbarData_Click);
             // 
             // frmMain
             // 
@@ -158,6 +160,7 @@
             this.ClientSize = new System.Drawing.Size(593, 348);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.mnuMain);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuMain;
             this.Name = "frmMain";
             this.Text = "双色球";
@@ -180,7 +183,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuDataLotteryRefresh;
         private System.Windows.Forms.ToolStripMenuItem mnuDataHistoryUpdate;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tbarData;
+        private System.Windows.Forms.ToolStripButton tbarLotteryDataMaintenance;
         private System.Windows.Forms.ToolStripMenuItem menuFile;
         private System.Windows.Forms.ToolStripMenuItem menuFileExit;
         private System.Windows.Forms.ToolStripMenuItem mnuDataGraph;
