@@ -149,5 +149,13 @@ namespace Lottery
 
         }
 
+        public static void ExitApp()
+        {
+            if (MessageBox.Show("确定关闭系统吗？", "关闭确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        } 
+
     }
 }

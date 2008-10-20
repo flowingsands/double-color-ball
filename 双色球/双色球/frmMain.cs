@@ -38,6 +38,18 @@ namespace Lottery
             SystemCommon.StatisticRangeData();
         }
 
+        private void tbarData_Click(object sender, EventArgs e)
+        {
+            FrmLotteryData frmLotterData = new FrmLotteryData();
+            frmLotterData.MdiParent = this.MdiParent;
+            frmLotterData.ShowDialog();
+        }
+
+        private void menuFileExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         
     }
 }
