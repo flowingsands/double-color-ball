@@ -83,14 +83,71 @@ namespace Lottery
             string insertString = string.Empty;
             for (int i = 0; i < count; i++)
             {
-                insertString += lastfiveList[i].InsertMysqlString + "\r\n";
+                //insertString += lastfiveList[i].InsertMysqlString + "\r\n";
+                insertString += lastfiveList[i].UpdateMysqlString + "\r\n";
             }
 
+            /* 理新到数据库　*/
             using (TableLastFiveIssue tabIssue = new TableLastFiveIssue())
             {
                 tabIssue.DataUpdate(insertString);
             }
  
         }
+
+        public static void StatisticRangeData()
+        {
+            IList<FlIssue> listFlIssue = null;
+
+            using (TableFlIssue tabFlIssue = new TableFlIssue())
+            {
+                listFlIssue = tabFlIssue.GetTableDataToList();
+            }
+
+            /* 统计最近五期的数据 */
+            IList<RangeIssue> rangeList = new List<RangeIssue>();
+            int count = listFlIssue.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                string nRutString = string.Empty;
+                for (int j = 0; j < 5; j++)
+                {
+                    if (i + j + 1 >= count) break;
+                    if (listFlIssue[i + j + 1].Result1 != "")
+                    {
+                        nRutString += listFlIssue[i + j + 1].Result1 + " ";
+                    }
+                }
+                RangeNumber rangNumber = new RangeNumber();
+                rangNumber.Anlysis(nRutString);
+                string[] redData = rangNumber.GetResult();
+                //int[] redCount = rangNumber.GetCount();
+
+                rangeList.Add(new RangeIssue(listFlIssue[i].LotIssue, listFlIssue[i].Result1, redData[0],
+                                            redData[1], "", 0,
+                                            redData[2], "", 0,
+                                            redData[3], "", 0,
+                                            redData[4], "", 0,
+                                            redData[5], "", 0
+                                              )
+                              );
+
+            }
+
+            string insertString = string.Empty;
+            for (int i = 0; i < count; i++)
+            {
+                insertString += rangeList[i].UpdateMysqlString + "\r\n";
+            }
+
+            /* 理新到数据库　*/
+            using (TableRangeIssue tabIssue = new TableRangeIssue())
+            {
+                tabIssue.DataUpdate(insertString);
+            }
+
+        }
+
     }
 }
