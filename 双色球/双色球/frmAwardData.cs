@@ -95,5 +95,11 @@ namespace Lottery
             int row = e.RowIndex;
             TextControlInit(row);
         }
+
+        private void FrmLotteryData_Resize(object sender, EventArgs e)
+        {
+            tabLotteryData.Height = this.Height - 80;
+            tabLotteryData.Width = this.Width - 30;
+        }
     }
 }
