@@ -20,7 +20,8 @@ namespace Lottery
         {
             DgvAwardDataGridInit();
             DgvRangeDataGridInit();
-            TextControlInit(0);
+            TextControlInit1(0);
+            TextControlInit1(2);
         }
 
         private void DgvAwardDataGridInit()
@@ -134,7 +135,7 @@ namespace Lottery
 
         }
 
-        private void TextControlInit(int row)
+        private void TextControlInit1(int row)
         {
             row = row < 0 ? 0 : row;
 
@@ -145,16 +146,30 @@ namespace Lottery
             txtSecondAward.Text = dgvAwardData.Rows[row].Cells[8].Value.ToString().Trim();
         }
 
+        private void TextControlInit2(int row)
+        {
+            row = row < 0 ? 0 : row;
+            txtLotteryNumber.Text = dgvRangeData.Rows[row].Cells[0].Value.ToString().Trim();
+            txtRedData.Text = dgvRangeData.Rows[row].Cells[1].Value.ToString().Trim();
+            txtLastFiveData.Text = dgvRangeData.Rows[row].Cells[2].Value.ToString().Trim();
+            txtRange1.Text = dgvRangeData.Rows[row].Cells[3].Value.ToString().Trim();
+            txtRange1.Text = dgvRangeData.Rows[row].Cells[3].Value.ToString().Trim();
+            txtRange2.Text = dgvRangeData.Rows[row].Cells[6].Value.ToString().Trim();
+            txtRange3.Text = dgvRangeData.Rows[row].Cells[9].Value.ToString().Trim();
+            txtRange4.Text = dgvRangeData.Rows[row].Cells[12].Value.ToString().Trim();
+            txtRange5.Text = dgvRangeData.Rows[row].Cells[15].Value.ToString().Trim();
+        }
+
         private void dgvAwardData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
-            TextControlInit(row);
+            TextControlInit1(row);
         }
 
         private void dgvAwardData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int row = e.RowIndex;
-            TextControlInit(row);
+            TextControlInit1(row);
         }
 
         private void FrmLotteryData_Resize(object sender, EventArgs e)
@@ -165,6 +180,19 @@ namespace Lottery
             dgvAwardData.Height = tabLotteryData.Height - 240;
             dgvAwardData.Width = tabLotteryData.Width - 40;
             //dgvAwardData.ScrollBars = ScrollBars.Both;
+        }
+
+        private void dgvRangeData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            TextControlInit2(row);
+
+        }
+
+        private void dgvRangeData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int row = e.RowIndex;
+            TextControlInit2(row);
         }
     }
 }
