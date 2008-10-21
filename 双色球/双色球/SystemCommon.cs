@@ -163,6 +163,19 @@ namespace Lottery
 
             return dataTable;
         }
+     
+        public static DataTable GetRangeDataTable()
+        {
+            DataTable dataTable = null;
+
+            using (TableRangeIssue tabRangeIssue = new TableRangeIssue())
+            {
+                dataTable = tabRangeIssue.GetTableDataForMaintenceForm();
+            }
+
+            return dataTable;
+        }
+      
         public static void ExitApp()
         {
             if (MessageBox.Show("确定关闭系统吗？", "关闭确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
