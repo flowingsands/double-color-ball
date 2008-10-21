@@ -387,6 +387,12 @@ namespace Lottery
 
     public class TableRangeIssue : BaseMySqlServer
     {
+        public DataTable GetTableDataForMaintenceForm()
+        {
+            //string query = "SELECT `LotIssue` as '彩票期号',`EndTime` as '开奖日期',`Result` as '红球',`Result2` as '蓝球',`Sale` as '销售金额',`Count1` as '一等奖',`Bonus1` as '奖金',`Count2` as '二等奖',`Bonus2` as '奖金' FROM fl_issue order by lotissue desc;";
+            string query = "SELECT LotIssue0,Result0,Result1,Range1,CountRange1,Count1,Range2,CountRange2,Count2,Range3,CountRange3,Count3,Range4,CountRange4,Count4,Range5,CountRange5,Count5 FROM range_issue order by lotissue0 desc;";
+            return this.GetDataTable(CommandType.Text, query, null);
+        }
 
     }
     

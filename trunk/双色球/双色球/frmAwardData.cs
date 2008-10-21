@@ -19,6 +19,7 @@ namespace Lottery
         private void FrmLotteryData_Load(object sender, EventArgs e)
         {
             DgvAwardDataGridInit();
+            DgvRangeDataGridInit();
             TextControlInit(0);
         }
 
@@ -67,6 +68,66 @@ namespace Lottery
                 dgvAwardData.Rows[i].Height = 19;
                 dgvAwardData.Rows[i].Resizable = DataGridViewTriState.False;
                 
+            }
+
+
+
+        }
+
+        private void DgvRangeDataGridInit()
+        {
+            dgvRangeData.DataSource = SystemCommon.GetRangeDataTable();
+
+            /* 相关属性设置 */
+            dgvRangeData.Columns[0].HeaderText = "彩票期号";
+            dgvRangeData.Columns[1].HeaderText = "开奖结果";
+            dgvRangeData.Columns[2].HeaderText = "最近五期";
+            dgvRangeData.Columns[3].HeaderText = "01-03";
+            dgvRangeData.Columns[4].HeaderText = "中奖号码";
+            dgvRangeData.Columns[5].HeaderText = "中奖数";
+            dgvRangeData.Columns[6].HeaderText = "04-07";
+            dgvRangeData.Columns[7].HeaderText = "中奖号码";
+            dgvRangeData.Columns[8].HeaderText = "中奖数";
+            dgvRangeData.Columns[9].HeaderText = "08-12";
+            dgvRangeData.Columns[10].HeaderText = "中奖号码";
+            dgvRangeData.Columns[11].HeaderText = "中奖数";
+            dgvRangeData.Columns[12].HeaderText = "13-20";
+            dgvRangeData.Columns[13].HeaderText = "中奖号码";
+            dgvRangeData.Columns[14].HeaderText = "中奖数";
+            dgvRangeData.Columns[15].HeaderText = "21-33";
+            dgvRangeData.Columns[16].HeaderText = "中奖号码";
+            dgvRangeData.Columns[17].HeaderText = "中奖数";
+
+            /* 不排序 */
+            dgvRangeData.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvRangeData.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvRangeData.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvRangeData.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvRangeData.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvRangeData.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvRangeData.Columns[6].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvRangeData.Columns[7].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvRangeData.Columns[8].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            dgvRangeData.Columns[0].Width = 60;
+            dgvRangeData.Columns[1].Width = 70;
+            dgvRangeData.Columns[2].Width = 210;
+            dgvRangeData.Columns[3].Width = 36;
+            dgvRangeData.Columns[4].Width = 62;
+            dgvRangeData.Columns[5].Width = 50;
+            dgvRangeData.Columns[6].Width = 58;
+            dgvRangeData.Columns[7].Width = 50;
+            dgvRangeData.Columns[8].Width = 58;
+
+            dgvRangeData.RowHeadersWidth = 25;
+            dgvRangeData.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
+            dgvRangeData.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+
+            for (int i = 0; i < dgvRangeData.Rows.Count; i++)
+            {
+                dgvRangeData.Rows[i].Height = 19;
+                dgvRangeData.Rows[i].Resizable = DataGridViewTriState.False;
+
             }
 
 
