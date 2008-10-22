@@ -50,6 +50,13 @@ namespace Lottery
             Application.Exit();
         }
 
+        private void tbarTest_Click(object sender, EventArgs e)
+        {
+            FrmTestProgress frm = new FrmTestProgress();
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
         
     }
 }

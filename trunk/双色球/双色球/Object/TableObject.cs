@@ -605,6 +605,7 @@ namespace Lottery
                                    + "('" + lotIssue0 + "','" + result0 + "');\r\n";
 
                 rutString += "UPDATE lastfive_issue SET "
+                            + "Result0="   + "'" + result0 + "',"
                             + "LotIssue1=" + "'" + lotIssue1 + "'," + "Result1=" + "'" + result1 + "'," + "CountResult1=" + "'" + countResult1 + "'," + "Count1=" + count1 + ","
                             + "LotIssue2=" + "'" + lotIssue2 + "'," + "Result2=" + "'" + result2 + "'," + "CountResult2=" + "'" + countResult2 + "'," + "Count2=" + count2 + ","
                             + "LotIssue3=" + "'" + lotIssue3 + "'," + "Result3=" + "'" + result3 + "'," + "CountResult3=" + "'" + countResult3 + "'," + "Count3=" + count3 + ","
@@ -891,6 +892,7 @@ namespace Lottery
                                    + "('" + lotIssue0 + "','" + result0 + "');\r\n";
 
                 rutString += "UPDATE range_issue SET "
+                            + "Result0=" + "'" + result0 + "',"
                             + "Result1=" + "'" + result1 + "',"
                             + "Range1=" + "'" + range1 + "'," + "CountRange1=" + "'" + countRange1 + "'," + "Count1=" + count1 + ","
                             + "Range2=" + "'" + range2 + "'," + "CountRange2=" + "'" + countRange2 + "'," + "Count2=" + count2 + ","
