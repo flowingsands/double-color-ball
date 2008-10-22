@@ -42,7 +42,7 @@ namespace Lottery
         {
             FrmLotteryData frmLotterData = new FrmLotteryData();
             frmLotterData.MdiParent = this.MdiParent;
-            frmLotterData.ShowDialog();
+            frmLotterData.Show();
         }
 
         private void menuFileExit_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace Lottery
         {
             FrmTestProgress frm = new FrmTestProgress();
             frm.MdiParent = this.MdiParent;
-            frm.Show();
+            frm.ShowDialog();
         }
 
         

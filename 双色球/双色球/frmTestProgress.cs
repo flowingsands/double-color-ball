@@ -19,18 +19,6 @@ namespace Lottery
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //用子线程工作
-            uu = 1;
-
-        }
-
          //开始下载
         public void StartDownload()
         {
@@ -74,11 +62,11 @@ namespace Lottery
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        
+        private void FrmTestProgress_Load(object sender, EventArgs e)
         {
-           new System.Threading.Thread(new System.Threading.ThreadStart(StartDownload)).Start();
-            Thread.Sleep(5000);
-            //注意，这里程序里是做程序更新任务的，为了模拟用 Sleep(5000),问题是用了以后，进度条没返应了，一直到五秒过了才动，这就不合要求了，请问一下，是什么原困，谢谢!
+            new System.Threading.Thread(new System.Threading.ThreadStart(StartDownload)).Start();
+
         }
 
   
