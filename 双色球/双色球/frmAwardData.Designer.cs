@@ -42,23 +42,23 @@
             this.labLotterNumber = new System.Windows.Forms.Label();
             this.dgvAwardData = new System.Windows.Forms.DataGridView();
             this.tabLastFiveData = new System.Windows.Forms.TabPage();
-            this.dgvRangeData = new System.Windows.Forms.DataGridView();
-            this.labLastFiveData = new System.Windows.Forms.Label();
-            this.labRange1 = new System.Windows.Forms.Label();
-            this.labRange2 = new System.Windows.Forms.Label();
-            this.txtLastFiveData = new System.Windows.Forms.TextBox();
-            this.txtRange1 = new System.Windows.Forms.TextBox();
-            this.txtRange2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtRange3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtRange4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRange5 = new System.Windows.Forms.TextBox();
-            this.labLotteryNumber = new System.Windows.Forms.Label();
-            this.txtLotteryNumber = new System.Windows.Forms.TextBox();
-            this.txtRedData = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.labLotteryNumber = new System.Windows.Forms.Label();
+            this.txtRange5 = new System.Windows.Forms.TextBox();
+            this.txtRange4 = new System.Windows.Forms.TextBox();
+            this.txtRange3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRange2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtRedData = new System.Windows.Forms.TextBox();
+            this.txtLotteryNumber = new System.Windows.Forms.TextBox();
+            this.txtRange1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLastFiveData = new System.Windows.Forms.TextBox();
+            this.labRange2 = new System.Windows.Forms.Label();
+            this.labRange1 = new System.Windows.Forms.Label();
+            this.labLastFiveData = new System.Windows.Forms.Label();
+            this.dgvRangeData = new System.Windows.Forms.DataGridView();
             this.tabLotteryData.SuspendLayout();
             this.tabAwardData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwardData)).BeginInit();
@@ -185,7 +185,7 @@
             this.dgvAwardData.Margin = new System.Windows.Forms.Padding(12);
             this.dgvAwardData.Name = "dgvAwardData";
             this.dgvAwardData.RowTemplate.Height = 23;
-            this.dgvAwardData.Size = new System.Drawing.Size(590, 240);
+            this.dgvAwardData.Size = new System.Drawing.Size(590, 248);
             this.dgvAwardData.TabIndex = 0;
             this.dgvAwardData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAwardData_RowHeaderMouseClick);
             this.dgvAwardData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAwardData_CellContentClick);
@@ -217,6 +217,134 @@
             this.tabLastFiveData.TabIndex = 1;
             this.tabLastFiveData.Text = "最近五期数据统计";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "开奖结果：";
+            // 
+            // labLotteryNumber
+            // 
+            this.labLotteryNumber.AutoSize = true;
+            this.labLotteryNumber.Location = new System.Drawing.Point(7, 45);
+            this.labLotteryNumber.Name = "labLotteryNumber";
+            this.labLotteryNumber.Size = new System.Drawing.Size(65, 12);
+            this.labLotteryNumber.TabIndex = 5;
+            this.labLotteryNumber.Text = "彩票期号：";
+            // 
+            // txtRange5
+            // 
+            this.txtRange5.Location = new System.Drawing.Point(245, 140);
+            this.txtRange5.Name = "txtRange5";
+            this.txtRange5.Size = new System.Drawing.Size(193, 21);
+            this.txtRange5.TabIndex = 4;
+            // 
+            // txtRange4
+            // 
+            this.txtRange4.Location = new System.Drawing.Point(245, 115);
+            this.txtRange4.Name = "txtRange4";
+            this.txtRange4.Size = new System.Drawing.Size(193, 21);
+            this.txtRange4.TabIndex = 4;
+            // 
+            // txtRange3
+            // 
+            this.txtRange3.Location = new System.Drawing.Point(245, 90);
+            this.txtRange3.Name = "txtRange3";
+            this.txtRange3.Size = new System.Drawing.Size(100, 21);
+            this.txtRange3.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(199, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 12);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "21-33：";
+            // 
+            // txtRange2
+            // 
+            this.txtRange2.Location = new System.Drawing.Point(245, 65);
+            this.txtRange2.Name = "txtRange2";
+            this.txtRange2.Size = new System.Drawing.Size(100, 21);
+            this.txtRange2.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(199, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 12);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "13-20：";
+            // 
+            // txtRedData
+            // 
+            this.txtRedData.Location = new System.Drawing.Point(72, 65);
+            this.txtRedData.Name = "txtRedData";
+            this.txtRedData.Size = new System.Drawing.Size(121, 21);
+            this.txtRedData.TabIndex = 4;
+            // 
+            // txtLotteryNumber
+            // 
+            this.txtLotteryNumber.Location = new System.Drawing.Point(72, 40);
+            this.txtLotteryNumber.Name = "txtLotteryNumber";
+            this.txtLotteryNumber.Size = new System.Drawing.Size(121, 21);
+            this.txtLotteryNumber.TabIndex = 4;
+            // 
+            // txtRange1
+            // 
+            this.txtRange1.Location = new System.Drawing.Point(245, 40);
+            this.txtRange1.Name = "txtRange1";
+            this.txtRange1.Size = new System.Drawing.Size(100, 21);
+            this.txtRange1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(199, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "08-12：";
+            // 
+            // txtLastFiveData
+            // 
+            this.txtLastFiveData.Location = new System.Drawing.Point(72, 13);
+            this.txtLastFiveData.Name = "txtLastFiveData";
+            this.txtLastFiveData.Size = new System.Drawing.Size(501, 21);
+            this.txtLastFiveData.TabIndex = 4;
+            // 
+            // labRange2
+            // 
+            this.labRange2.AutoSize = true;
+            this.labRange2.Location = new System.Drawing.Point(199, 68);
+            this.labRange2.Name = "labRange2";
+            this.labRange2.Size = new System.Drawing.Size(47, 12);
+            this.labRange2.TabIndex = 3;
+            this.labRange2.Text = "04-07：";
+            // 
+            // labRange1
+            // 
+            this.labRange1.AutoSize = true;
+            this.labRange1.Location = new System.Drawing.Point(199, 43);
+            this.labRange1.Name = "labRange1";
+            this.labRange1.Size = new System.Drawing.Size(47, 12);
+            this.labRange1.TabIndex = 2;
+            this.labRange1.Text = "01-03：";
+            // 
+            // labLastFiveData
+            // 
+            this.labLastFiveData.AutoSize = true;
+            this.labLastFiveData.Location = new System.Drawing.Point(8, 18);
+            this.labLastFiveData.Name = "labLastFiveData";
+            this.labLastFiveData.Size = new System.Drawing.Size(65, 12);
+            this.labLastFiveData.TabIndex = 1;
+            this.labLastFiveData.Text = "最近五期：";
+            // 
             // dgvRangeData
             // 
             this.dgvRangeData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -228,134 +356,6 @@
             this.dgvRangeData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRangeData_RowHeaderMouseClick);
             this.dgvRangeData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRangeData_CellContentClick);
             // 
-            // labLastFiveData
-            // 
-            this.labLastFiveData.AutoSize = true;
-            this.labLastFiveData.Location = new System.Drawing.Point(8, 18);
-            this.labLastFiveData.Name = "labLastFiveData";
-            this.labLastFiveData.Size = new System.Drawing.Size(65, 12);
-            this.labLastFiveData.TabIndex = 1;
-            this.labLastFiveData.Text = "最近五期：";
-            // 
-            // labRange1
-            // 
-            this.labRange1.AutoSize = true;
-            this.labRange1.Location = new System.Drawing.Point(199, 43);
-            this.labRange1.Name = "labRange1";
-            this.labRange1.Size = new System.Drawing.Size(47, 12);
-            this.labRange1.TabIndex = 2;
-            this.labRange1.Text = "01-03：";
-            // 
-            // labRange2
-            // 
-            this.labRange2.AutoSize = true;
-            this.labRange2.Location = new System.Drawing.Point(199, 68);
-            this.labRange2.Name = "labRange2";
-            this.labRange2.Size = new System.Drawing.Size(47, 12);
-            this.labRange2.TabIndex = 3;
-            this.labRange2.Text = "04-07：";
-            // 
-            // txtLastFiveData
-            // 
-            this.txtLastFiveData.Location = new System.Drawing.Point(72, 13);
-            this.txtLastFiveData.Name = "txtLastFiveData";
-            this.txtLastFiveData.Size = new System.Drawing.Size(501, 21);
-            this.txtLastFiveData.TabIndex = 4;
-            // 
-            // txtRange1
-            // 
-            this.txtRange1.Location = new System.Drawing.Point(245, 40);
-            this.txtRange1.Name = "txtRange1";
-            this.txtRange1.Size = new System.Drawing.Size(100, 21);
-            this.txtRange1.TabIndex = 4;
-            // 
-            // txtRange2
-            // 
-            this.txtRange2.Location = new System.Drawing.Point(245, 65);
-            this.txtRange2.Name = "txtRange2";
-            this.txtRange2.Size = new System.Drawing.Size(100, 21);
-            this.txtRange2.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 12);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "08-12：";
-            // 
-            // txtRange3
-            // 
-            this.txtRange3.Location = new System.Drawing.Point(245, 90);
-            this.txtRange3.Name = "txtRange3";
-            this.txtRange3.Size = new System.Drawing.Size(100, 21);
-            this.txtRange3.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(199, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 12);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "13-20：";
-            // 
-            // txtRange4
-            // 
-            this.txtRange4.Location = new System.Drawing.Point(245, 115);
-            this.txtRange4.Name = "txtRange4";
-            this.txtRange4.Size = new System.Drawing.Size(193, 21);
-            this.txtRange4.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(199, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 12);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "21-33：";
-            // 
-            // txtRange5
-            // 
-            this.txtRange5.Location = new System.Drawing.Point(245, 140);
-            this.txtRange5.Name = "txtRange5";
-            this.txtRange5.Size = new System.Drawing.Size(193, 21);
-            this.txtRange5.TabIndex = 4;
-            // 
-            // labLotteryNumber
-            // 
-            this.labLotteryNumber.AutoSize = true;
-            this.labLotteryNumber.Location = new System.Drawing.Point(7, 45);
-            this.labLotteryNumber.Name = "labLotteryNumber";
-            this.labLotteryNumber.Size = new System.Drawing.Size(65, 12);
-            this.labLotteryNumber.TabIndex = 5;
-            this.labLotteryNumber.Text = "彩票期号：";
-            // 
-            // txtLotteryNumber
-            // 
-            this.txtLotteryNumber.Location = new System.Drawing.Point(72, 40);
-            this.txtLotteryNumber.Name = "txtLotteryNumber";
-            this.txtLotteryNumber.Size = new System.Drawing.Size(121, 21);
-            this.txtLotteryNumber.TabIndex = 4;
-            // 
-            // txtRedData
-            // 
-            this.txtRedData.Location = new System.Drawing.Point(72, 65);
-            this.txtRedData.Name = "txtRedData";
-            this.txtRedData.Size = new System.Drawing.Size(121, 21);
-            this.txtRedData.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "开奖结果：";
-            // 
             // FrmLotteryData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -366,6 +366,7 @@
             this.Name = "FrmLotteryData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "彩票数据维护";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmLotteryData_Load);
             this.Resize += new System.EventHandler(this.FrmLotteryData_Resize);
             this.tabLotteryData.ResumeLayout(false);

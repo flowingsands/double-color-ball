@@ -325,41 +325,7 @@ namespace Lottery
         }
 
         /*
-        public void GetTableData1()
-        {
-            string query = "select `LotIssue`,`StartTime`,`EndTime`,`Result`,`Result2`,`Result3`,`Bonus1`,`Bonus2`,`Bonus3`,`Sale`,`Count1`,`Count2`,`Count3`,`Memo` from doublecolorball.fl_issue order by lotissue desc;";
-            MySqlDataReader rdr = null;
-            rdr = ExecuteReader(CommandType.Text, query, null);
-            while (rdr.Read())
-            {
-                // Console.WriteLine(rdr.GetString(0));
-            }
-            rdr.Close();
-        }
-
-        public IList<Fl_Issue> GetTableData2()
-        {
-            IList<Fl_Issue> list = new List<Fl_Issue>();
-            string query = "select `LotIssue`,`EndTime`,`Result`,`Result2`,`Bonus1`,`Bonus2`,`Bonus3`,`Sale`,`Count1`,`Count2`,`Count3` from doublecolorball.fl_issue order by lotissue desc;";
-            MySqlDataReader rdr = null;
-
-            rdr = ExecuteReader(CommandType.Text, query, null);
-            while (rdr.Read())
-            {
-                Console.WriteLine(rdr.GetString(0));
-                list.Add(new Fl_Issue(rdr.GetString(0), rdr.GetDateTime(1), rdr.GetString(2), rdr.GetString(3), rdr.GetInt32(4), rdr.GetInt32(5), rdr.GetInt32(6), rdr.GetInt32(7), rdr.GetInt32(8), rdr.GetInt32(9), rdr.GetInt32(10)));
-            }
-            rdr.Close();
-            return list;
-
-        }
-
-        public DataTable GetTableData3()
-        {
-            string query = "select `LotIssue`,`EndTime`,`Result`,`Result2`,`Sale`,`Count1`,`Bonus1`,`Count2`,`Bonus2`,`Count3`,`Bonus3` from doublecolorball.fl_issue order by lotissue desc;";
-            return this.GetDataTable(CommandType.Text, query, null);
-        }
-
+        
         public Hashtable GetTableData4()
         {
             Hashtable ht = new Hashtable();
