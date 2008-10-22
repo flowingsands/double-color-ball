@@ -40,10 +40,11 @@
             this.mnuDataGraph = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataGraphStatisLastFive = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataGraphRange = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tbarTools = new System.Windows.Forms.ToolStrip();
             this.tbarLotteryDataMaintenance = new System.Windows.Forms.ToolStripButton();
+            this.tbarTest = new System.Windows.Forms.ToolStripButton();
             this.mnuMain.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.tbarTools.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuMain
@@ -69,7 +70,7 @@
             // menuFileExit
             // 
             this.menuFileExit.Name = "menuFileExit";
-            this.menuFileExit.Size = new System.Drawing.Size(152, 22);
+            this.menuFileExit.Size = new System.Drawing.Size(94, 22);
             this.menuFileExit.Text = "退出";
             this.menuFileExit.Click += new System.EventHandler(this.menuFileExit_Click);
             // 
@@ -87,27 +88,27 @@
             // mnuDataAwardUpdate
             // 
             this.mnuDataAwardUpdate.Name = "mnuDataAwardUpdate";
-            this.mnuDataAwardUpdate.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataAwardUpdate.Size = new System.Drawing.Size(152, 22);
             this.mnuDataAwardUpdate.Text = "开奖数据下载";
             this.mnuDataAwardUpdate.Click += new System.EventHandler(this.mnuDataAwardUpdate_Click);
             // 
             // mnuDataLotteryUpdate
             // 
             this.mnuDataLotteryUpdate.Name = "mnuDataLotteryUpdate";
-            this.mnuDataLotteryUpdate.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataLotteryUpdate.Size = new System.Drawing.Size(152, 22);
             this.mnuDataLotteryUpdate.Text = "彩票期号下载";
             this.mnuDataLotteryUpdate.Click += new System.EventHandler(this.mnuDataLotteryUpdate_Click);
             // 
             // mnuDataLotteryRefresh
             // 
             this.mnuDataLotteryRefresh.Name = "mnuDataLotteryRefresh";
-            this.mnuDataLotteryRefresh.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataLotteryRefresh.Size = new System.Drawing.Size(152, 22);
             this.mnuDataLotteryRefresh.Text = "刷新彩票期号";
             // 
             // mnuDataHistoryUpdate
             // 
             this.mnuDataHistoryUpdate.Name = "mnuDataHistoryUpdate";
-            this.mnuDataHistoryUpdate.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataHistoryUpdate.Size = new System.Drawing.Size(152, 22);
             this.mnuDataHistoryUpdate.Text = "历史数据更新";
             // 
             // mnuDataGraph
@@ -133,15 +134,16 @@
             this.mnuDataGraphRange.Text = "红球数据分区";
             this.mnuDataGraphRange.Click += new System.EventHandler(this.mnuDataGraphRange_Click);
             // 
-            // toolStrip1
+            // tbarTools
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tbarLotteryDataMaintenance});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(593, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tbarTools.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tbarLotteryDataMaintenance,
+            this.tbarTest});
+            this.tbarTools.Location = new System.Drawing.Point(0, 24);
+            this.tbarTools.Name = "tbarTools";
+            this.tbarTools.Size = new System.Drawing.Size(593, 25);
+            this.tbarTools.TabIndex = 1;
+            this.tbarTools.Text = "toolStrip1";
             // 
             // tbarLotteryDataMaintenance
             // 
@@ -153,12 +155,22 @@
             this.tbarLotteryDataMaintenance.Text = "数据维护";
             this.tbarLotteryDataMaintenance.Click += new System.EventHandler(this.tbarData_Click);
             // 
+            // tbarTest
+            // 
+            this.tbarTest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbarTest.Image = ((System.Drawing.Image)(resources.GetObject("tbarTest.Image")));
+            this.tbarTest.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbarTest.Name = "tbarTest";
+            this.tbarTest.Size = new System.Drawing.Size(23, 22);
+            this.tbarTest.Text = "toolStripButton1";
+            this.tbarTest.Click += new System.EventHandler(this.tbarTest_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 348);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.tbarTools);
             this.Controls.Add(this.mnuMain);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuMain;
@@ -167,8 +179,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.tbarTools.ResumeLayout(false);
+            this.tbarTools.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,13 +194,14 @@
         private System.Windows.Forms.ToolStripMenuItem mnuDataLotteryUpdate;
         private System.Windows.Forms.ToolStripMenuItem mnuDataLotteryRefresh;
         private System.Windows.Forms.ToolStripMenuItem mnuDataHistoryUpdate;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip tbarTools;
         private System.Windows.Forms.ToolStripButton tbarLotteryDataMaintenance;
         private System.Windows.Forms.ToolStripMenuItem menuFile;
         private System.Windows.Forms.ToolStripMenuItem menuFileExit;
         private System.Windows.Forms.ToolStripMenuItem mnuDataGraph;
         private System.Windows.Forms.ToolStripMenuItem mnuDataGraphStatisLastFive;
         private System.Windows.Forms.ToolStripMenuItem mnuDataGraphRange;
+        private System.Windows.Forms.ToolStripButton tbarTest;
     }
 }
 
