@@ -53,6 +53,12 @@
     <Compile Include="frmAwardData.Designer.cs">
       <DependentUpon>frmAwardData.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLastFive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLastFive.Designer.cs">
+      <DependentUpon>frmLastFive.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAwardData.resx">
       <DependentUpon>frmAwardData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLastFive.resx">
+      <DependentUpon>frmLastFive.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
