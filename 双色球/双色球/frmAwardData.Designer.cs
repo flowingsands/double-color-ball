@@ -366,7 +366,6 @@
             this.Name = "FrmLotteryData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "彩票数据维护";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmLotteryData_Load);
             this.Resize += new System.EventHandler(this.FrmLotteryData_Resize);
             this.tabLotteryData.ResumeLayout(false);

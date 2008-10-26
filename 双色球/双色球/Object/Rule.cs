@@ -224,4 +224,20 @@ namespace Lottery
 
     }
 
+    public class LastFiveNumber
+    {
+        //private ArrayList[] LastFiveData;
+        private LastFiveDataIssue lastData;
+
+        public LastFiveNumber(LastFiveDataIssue objLastFive)
+        {
+            lastData = objLastFive;
+        }
+
+
+
+
+
+
+    }
 }

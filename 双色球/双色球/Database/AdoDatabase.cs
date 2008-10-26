@@ -301,7 +301,6 @@ namespace Lottery
 
         public DataTable GetTableDataForMaintenceForm()
         {
-            //string query = "SELECT `LotIssue` as '彩票期号',`EndTime` as '开奖日期',`Result` as '红球',`Result2` as '蓝球',`Sale` as '销售金额',`Count1` as '一等奖',`Bonus1` as '奖金',`Count2` as '二等奖',`Bonus2` as '奖金' FROM fl_issue order by lotissue desc;";
             string query = "SELECT `LotIssue`,`EndTime`,`Result`,`Result2`,`Sale`,`Count1`,`Bonus1`,`Count2`,`Bonus2` FROM fl_issue order by lotissue desc;";
 
             return this.GetDataTable(CommandType.Text, query, null);
@@ -355,13 +354,49 @@ namespace Lottery
     {
         public DataTable GetTableDataForMaintenceForm()
         {
-            //string query = "SELECT `LotIssue` as '彩票期号',`EndTime` as '开奖日期',`Result` as '红球',`Result2` as '蓝球',`Sale` as '销售金额',`Count1` as '一等奖',`Bonus1` as '奖金',`Count2` as '二等奖',`Bonus2` as '奖金' FROM fl_issue order by lotissue desc;";
             string query = "SELECT LotIssue0,Result0,Result1,Range1,CountRange1,Count1,Range2,CountRange2,Count2,Range3,CountRange3,Count3,Range4,CountRange4,Count4,Range5,CountRange5,Count5 FROM range_issue order by lotissue0 desc;";
             return this.GetDataTable(CommandType.Text, query, null);
         }
 
     }
-    
+
+    public class TableLastFiveDataIssue : BaseMySqlServer
+    {
+        public DataTable GetTableData()
+        {
+            string query = "SELECT LotIssue,RedResult,BlueResult,LastFiveResult,LastLotIssue1,LastRedResult1,LastBlueResult1,LastCountRedResult1,LastCountResult1,LastLotIssue2,LastRedResult2,LastBlueResult2,LastCountRedResult2,LastCountResult2,LastLotIssue3,LastRedResult3,LastBlueResult3,LastCountRedResult3,LastCountResult3,LastLotIssue4,LastRedResult4,LastBlueResult4,LastCountRedResult4,LastCountResult4,LastLotIssue5,LastRedResult5,LastBlueResult5,LastCountRedResult5,LastCountResult5,Range1,CountRedRange1,CountRange1,Range2,CountRedRange2,CountRange2,Range3,CountRedRange3,CountRange3,Range4,CountRedRange4,CountRange4,Range5,CountRedRange5,CountRange5 FROM lastfivedata_issue order by LotIssue desc;";
+            return this.GetDataTable(CommandType.Text, query, null);
+        }
+
+        public IList<LastFiveDataIssue> GetTableDataToList()
+        {
+            IList<LastFiveDataIssue> list = new List<LastFiveDataIssue>();
+            string query = "SELECT LotIssue,RedResult,BlueResult,LastFiveResult,LastLotIssue1,LastRedResult1,LastBlueResult1,LastCountRedResult1,LastCountResult1,LastLotIssue2,LastRedResult2,LastBlueResult2,LastCountRedResult2,LastCountResult2,LastLotIssue3,LastRedResult3,LastBlueResult3,LastCountRedResult3,LastCountResult3,LastLotIssue4,LastRedResult4,LastBlueResult4,LastCountRedResult4,LastCountResult4,LastLotIssue5,LastRedResult5,LastBlueResult5,LastCountRedResult5,LastCountResult5,Range1,CountRedRange1,CountRange1,Range2,CountRedRange2,CountRange2,Range3,CountRedRange3,CountRange3,Range4,CountRedRange4,CountRange4,Range5,CountRedRange5,CountRange5 FROM lastfivedata_issue order by LotIssue asc;";
+            MySqlDataReader rdr = null;
+
+            rdr = ExecuteReader(CommandType.Text, query, null);
+            while (rdr.Read())
+            {
+                Console.WriteLine(rdr.GetString(0));
+                list.Add(new LastFiveDataIssue(rdr.GetString(0), rdr.GetString(1), rdr.GetString(2), rdr.GetString(3),
+                                                 rdr.GetString(4), rdr.GetString(5), rdr.GetString(6), rdr.GetString(7), rdr.GetInt32(8),
+                                                 rdr.GetString(9), rdr.GetString(10), rdr.GetString(11), rdr.GetString(12), rdr.GetInt32(13),
+                                                 rdr.GetString(14), rdr.GetString(15), rdr.GetString(16), rdr.GetString(17), rdr.GetInt32(18),
+                                                 rdr.GetString(19), rdr.GetString(20), rdr.GetString(21), rdr.GetString(22), rdr.GetInt32(23),
+                                                 rdr.GetString(24), rdr.GetString(25), rdr.GetString(26), rdr.GetString(27), rdr.GetInt32(28),
+                                                 rdr.GetString(29), rdr.GetString(30), rdr.GetInt32(31),
+                                                 rdr.GetString(32), rdr.GetString(33), rdr.GetInt32(34),
+                                                 rdr.GetString(35), rdr.GetString(36), rdr.GetInt32(37),
+                                                 rdr.GetString(38), rdr.GetString(39), rdr.GetInt32(40),
+                                                 rdr.GetString(41), rdr.GetString(42), rdr.GetInt32(43)
+                                                 )
+                         );
+            }
+            rdr.Close();
+            return list;
+
+        }
+    }
 
     #endregion
 }

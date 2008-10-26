@@ -69,3 +69,56 @@ CREATE TABLE  `doublecolorball`.`range_issue` (
   `Count5` int(11) default NULL,
   PRIMARY KEY  (`LotIssue0`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `doublecolorball`.`lastfivedata_issue`;
+CREATE TABLE  `doublecolorball`.`lastfivedata_issue` (
+  `LotIssue` char(7) NOT NULL,
+  `RedResult` char(17) default '',
+  `BlueResult` char(2) default '',
+  `LastFiveResult` char(255) default '',
+
+  `LastLotIssue1` char(7) default '',
+  `LastRedResult1` char(17) default '',
+  `LastBlueResult1` char(2) default '',
+  `LastCountRedResult1` char(17) default '',
+  `LastCountResult1` int(11) default '0',
+  `LastLotIssue2` char(7) default '',
+  `LastRedResult2` char(17) default '',
+  `LastBlueResult2` char(2) default '',
+  `LastCountRedResult2` char(17) default '',
+  `LastCountResult2` int(11) default '0',
+  `LastLotIssue3` char(7) default '',
+  `LastRedResult3` char(17) default '',
+  `LastBlueResult3` char(2) default '',
+  `LastCountRedResult3` char(17) default '',
+  `LastCountResult3` int(11) default '0',
+  `LastLotIssue4` char(7) default '',
+  `LastRedResult4` char(17) default '',
+  `LastBlueResult4` char(2) default '',
+  `LastCountRedResult4` char(17) default '',
+  `LastCountResult4` int(11) default '0',
+  `LastLotIssue5` char(7) default '',
+  `LastRedResult5` char(17) default '',
+  `LastBlueResult5` char(2) default '',
+  `LastCountRedResult5` char(17) default '',
+  `LastCountResult5` int(11) default '0',
+
+  `Range1` char(255) default '',
+  `CountRedRange1` char(17) default '',
+  `CountRange1` int(11) default '0',
+  `Range2` char(255) default '',
+  `CountRedRange2` char(17) default '',
+  `CountRange2` int(11) default '0',
+  `Range3` char(255) default '',
+  `CountRedRange3` char(17) default '',
+  `CountRange3` int(11) default '0',
+  `Range4` char(255) default '',
+  `CountRedRange4` char(17) default '',
+  `CountRange4` int(11) default '0',
+  `Range5` char(255) default '',
+  `CountRedRange5` char(17) default '',
+  `CountRange5` int(11) default '0',
+
+  PRIMARY KEY  (`LotIssue`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
