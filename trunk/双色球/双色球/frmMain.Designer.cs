@@ -43,6 +43,7 @@
             this.tbarTools = new System.Windows.Forms.ToolStrip();
             this.tbarLotteryDataMaintenance = new System.Windows.Forms.ToolStripButton();
             this.tbarTest = new System.Windows.Forms.ToolStripButton();
+            this.mnuDGLastFiveData = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.tbarTools.SuspendLayout();
             this.SuspendLayout();
@@ -88,34 +89,35 @@
             // mnuDataAwardUpdate
             // 
             this.mnuDataAwardUpdate.Name = "mnuDataAwardUpdate";
-            this.mnuDataAwardUpdate.Size = new System.Drawing.Size(152, 22);
+            this.mnuDataAwardUpdate.Size = new System.Drawing.Size(142, 22);
             this.mnuDataAwardUpdate.Text = "开奖数据下载";
             this.mnuDataAwardUpdate.Click += new System.EventHandler(this.mnuDataAwardUpdate_Click);
             // 
             // mnuDataLotteryUpdate
             // 
             this.mnuDataLotteryUpdate.Name = "mnuDataLotteryUpdate";
-            this.mnuDataLotteryUpdate.Size = new System.Drawing.Size(152, 22);
+            this.mnuDataLotteryUpdate.Size = new System.Drawing.Size(142, 22);
             this.mnuDataLotteryUpdate.Text = "彩票期号下载";
             this.mnuDataLotteryUpdate.Click += new System.EventHandler(this.mnuDataLotteryUpdate_Click);
             // 
             // mnuDataLotteryRefresh
             // 
             this.mnuDataLotteryRefresh.Name = "mnuDataLotteryRefresh";
-            this.mnuDataLotteryRefresh.Size = new System.Drawing.Size(152, 22);
+            this.mnuDataLotteryRefresh.Size = new System.Drawing.Size(142, 22);
             this.mnuDataLotteryRefresh.Text = "刷新彩票期号";
             // 
             // mnuDataHistoryUpdate
             // 
             this.mnuDataHistoryUpdate.Name = "mnuDataHistoryUpdate";
-            this.mnuDataHistoryUpdate.Size = new System.Drawing.Size(152, 22);
+            this.mnuDataHistoryUpdate.Size = new System.Drawing.Size(142, 22);
             this.mnuDataHistoryUpdate.Text = "历史数据更新";
             // 
             // mnuDataGraph
             // 
             this.mnuDataGraph.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuDataGraphStatisLastFive,
-            this.mnuDataGraphRange});
+            this.mnuDataGraphRange,
+            this.mnuDGLastFiveData});
             this.mnuDataGraph.Name = "mnuDataGraph";
             this.mnuDataGraph.Size = new System.Drawing.Size(65, 20);
             this.mnuDataGraph.Text = "数据图表";
@@ -123,14 +125,14 @@
             // mnuDataGraphStatisLastFive
             // 
             this.mnuDataGraphStatisLastFive.Name = "mnuDataGraphStatisLastFive";
-            this.mnuDataGraphStatisLastFive.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataGraphStatisLastFive.Size = new System.Drawing.Size(152, 22);
             this.mnuDataGraphStatisLastFive.Text = "统计最近五期";
             this.mnuDataGraphStatisLastFive.Click += new System.EventHandler(this.mnuDataGraphStatisLastFive_Click);
             // 
             // mnuDataGraphRange
             // 
             this.mnuDataGraphRange.Name = "mnuDataGraphRange";
-            this.mnuDataGraphRange.Size = new System.Drawing.Size(142, 22);
+            this.mnuDataGraphRange.Size = new System.Drawing.Size(152, 22);
             this.mnuDataGraphRange.Text = "红球数据分区";
             this.mnuDataGraphRange.Click += new System.EventHandler(this.mnuDataGraphRange_Click);
             // 
@@ -164,6 +166,13 @@
             this.tbarTest.Size = new System.Drawing.Size(23, 22);
             this.tbarTest.Text = "toolStripButton1";
             this.tbarTest.Click += new System.EventHandler(this.tbarTest_Click);
+            // 
+            // mnuDGLastFiveData
+            // 
+            this.mnuDGLastFiveData.Name = "mnuDGLastFiveData";
+            this.mnuDGLastFiveData.Size = new System.Drawing.Size(152, 22);
+            this.mnuDGLastFiveData.Text = "最近五期数据";
+            this.mnuDGLastFiveData.Click += new System.EventHandler(this.mnuDGLastFiveData_Click);
             // 
             // frmMain
             // 
@@ -202,6 +211,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuDataGraphStatisLastFive;
         private System.Windows.Forms.ToolStripMenuItem mnuDataGraphRange;
         private System.Windows.Forms.ToolStripButton tbarTest;
+        private System.Windows.Forms.ToolStripMenuItem mnuDGLastFiveData;
     }
 }
 

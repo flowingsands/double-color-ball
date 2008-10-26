@@ -906,4 +906,510 @@ namespace Lottery
 
     }
 
+    public class LastFiveDataIssue
+    {
+        #region 变量定义
+        private string _LotIssue;
+        private string _RedResult;
+        private string _BlueResult;
+        private string _LastFiveResult;
+
+        private string _LastLotIssue1;
+        private string _LastRedResult1;
+        private string _LastBlueResult1;
+        private string _LastCountRedResult1;
+        private int    _LastCountResult1;
+
+        private string _LastLotIssue2;
+        private string _LastRedResult2;
+        private string _LastBlueResult2;
+        private string _LastCountRedResult2;
+        private int    _LastCountResult2;
+
+        private string _LastLotIssue3;
+        private string _LastRedResult3;
+        private string _LastBlueResult3;
+        private string _LastCountRedResult3;
+        private int    _LastCountResult3;
+
+        private string _LastLotIssue4;
+        private string _LastRedResult4;
+        private string _LastBlueResult4;
+        private string _LastCountRedResult4;
+        private int    _LastCountResult4;
+
+        private string _LastLotIssue5;
+        private string _LastRedResult5;
+        private string _LastBlueResult5;
+        private string _LastCountRedResult5;
+        private int    _LastCountResult5;
+
+        private string _Range1;
+        private string _CountRedRange1;
+        private int    _CountRange1;
+
+        private string _Range2;
+        private string _CountRedRange2;
+        private int    _CountRange2;
+
+        private string _Range3;
+        private string _CountRedRange3;
+        private int    _CountRange3;
+
+        private string _Range4;
+        private string _CountRedRange4;
+        private int    _CountRange4;
+
+        private string _Range5;
+        private string _CountRedRange5;
+        private int    _CountRange5;
+        #endregion
+
+        #region 函数
+        public LastFiveDataIssue(string LotIssue, string RedResult,string BlueResult,
+                                string LastFiveResult,
+                                string LastLotIssue1, string LastRedResult1, string LastBlueResult1, string LastCountRedResult1, int LastCountResult1,
+                                string LastLotIssue2, string LastRedResult2, string LastBlueResult2, string LastCountRedResult2, int LastCountResult2,
+                                string LastLotIssue3, string LastRedResult3, string LastBlueResult3, string LastCountRedResult3, int LastCountResult3,
+                                string LastLotIssue4, string LastRedResult4, string LastBlueResult4, string LastCountRedResult4, int LastCountResult4,
+                                string LastLotIssue5, string LastRedResult5, string LastBlueResult5, string LastCountRedResult5, int LastCountResult5,
+                                string Range1, string CountRedRange1, int CountRange1,
+                                string Range2, string CountRedRange2, int CountRange2,
+                                string Range3, string CountRedRange3, int CountRange3,
+                                string Range4, string CountRedRange4, int CountRange4,
+                                string Range5, string CountRedRange5, int CountRange5)
+
+        {
+            _LotIssue = LotIssue;
+            _RedResult = RedResult;
+            _BlueResult = BlueResult;
+            _LastFiveResult = LastFiveResult;
+
+            _LastLotIssue1 = LastLotIssue1;
+            _LastRedResult1 = LastRedResult1;
+            _LastBlueResult1 = LastBlueResult1;
+            _LastCountRedResult1 = LastCountRedResult1;
+            _LastCountResult1 = LastCountResult1; 
+
+            _LastLotIssue2 = LastLotIssue2;
+            _LastRedResult2 = LastRedResult2;
+            _LastBlueResult2 = LastBlueResult2;
+            _LastCountRedResult2 = LastCountRedResult2;
+            _LastCountResult2 = LastCountResult2;
+
+            _LastLotIssue3 = LastLotIssue3;
+            _LastRedResult3 = LastRedResult3;
+            _LastBlueResult3 = LastBlueResult3;
+            _LastCountRedResult3 = LastCountRedResult3;
+            _LastCountResult3 = LastCountResult3;
+
+            _LastLotIssue4 = LastLotIssue4;
+            _LastRedResult4 = LastRedResult4;
+            _LastBlueResult4 = LastBlueResult4;
+            _LastCountRedResult4 = LastCountRedResult4;
+            _LastCountResult4 = LastCountResult4;
+
+            _LastLotIssue5 = LastLotIssue5;
+            _LastRedResult5 = LastRedResult5;
+            _LastBlueResult5 = LastBlueResult5;
+            _LastCountRedResult5 = LastCountRedResult5;
+            _LastCountResult5 = LastCountResult5;
+
+            _Range1 = Range1;
+            _CountRedRange1 = CountRedRange1;
+            _CountRange1 = CountRange1;
+            _Range2 = Range2;
+            _CountRedRange2 = CountRedRange2;
+            _CountRange2 = CountRange2;
+            _Range3 = Range3;
+            _CountRedRange3 = CountRedRange3;
+            _CountRange3 = CountRange3;
+            _Range4 = Range4;
+            _CountRedRange4 = CountRedRange4;
+            _CountRange4 = CountRange4;
+            _Range5 = Range5;
+            _CountRedRange5 = CountRedRange5;
+            _CountRange5 = CountRange5;
+
+
+        }
+       
+        public string LotIssue
+        {
+            get
+            {
+                return _LotIssue;
+            }
+            set
+            {
+                _LotIssue = value;
+            }
+        }
+
+        public string RedResult
+        {
+            get
+            {
+                return _RedResult;
+            }
+            set
+            {
+                _RedResult = value;
+            }
+        }
+
+        public string BlueResult
+        {
+            get
+            {
+                return _BlueResult;
+            }
+            set
+            {
+                _BlueResult = value;
+            }
+        }
+
+        public string LastFiveResult
+        {
+            get
+            {
+                return _LastFiveResult;
+            }
+            set
+            {
+                _LastFiveResult = value;
+            }
+        }
+
+        public string LastLotIssue1
+        {
+            get
+            {
+                return _LastLotIssue1;
+            }
+            set
+            {
+                _LastLotIssue1 = value;
+            }
+        }
+
+        public string LastRedResult1
+        {
+            get
+            {
+                return _LastRedResult1;
+            }
+            set
+            {
+                _LastRedResult1 = value;
+            }
+        }
+
+        public string LastBlueResult1
+        {
+            get
+            {
+                return _LastBlueResult1;
+            }
+            set
+            {
+                _LastBlueResult1 = value;
+            }
+        }
+
+        public string LastCountRedResult1
+        {
+            get
+            {
+                return _LastCountRedResult1;
+            }
+            set
+            {
+                _LastCountRedResult1 = value;
+            }
+        }
+
+        public int LastCountResult1
+        {
+            get
+            {
+                return _LastCountResult1;
+            }
+            set
+            {
+                _LastCountResult1 = value;
+            }
+        }
+
+        public string LastLotIssue2
+        {
+            get
+            {
+                return _LastLotIssue2;
+            }
+            set
+            {
+                _LastLotIssue2 = value;
+            }
+        }
+
+        public string LastRedResult2
+        {
+            get
+            {
+                return _LastRedResult2;
+            }
+            set
+            {
+                _LastRedResult2 = value;
+            }
+        }
+
+        public string LastBlueResult2
+        {
+            get
+            {
+                return _LastBlueResult2;
+            }
+            set
+            {
+                _LastBlueResult2 = value;
+            }
+        }
+
+        public string LastCountRedResult2
+        {
+            get
+            {
+                return _LastCountRedResult2;
+            }
+            set
+            {
+                _LastCountRedResult2 = value;
+            }
+        }
+
+        public int LastCountResult2
+        {
+            get
+            {
+                return _LastCountResult2;
+            }
+            set
+            {
+                _LastCountResult2 = value;
+            }
+        }
+
+        public string LastLotIssue3
+        {
+            get
+            {
+                return _LastLotIssue3;
+            }
+            set
+            {
+                _LastLotIssue3 = value;
+            }
+        }
+
+        public string LastRedResult3
+        {
+            get
+            {
+                return _LastRedResult3;
+            }
+            set
+            {
+                _LastRedResult3 = value;
+            }
+        }
+
+        public string LastBlueResult3
+        {
+            get
+            {
+                return _LastBlueResult3;
+            }
+            set
+            {
+                _LastBlueResult3 = value;
+            }
+        }
+
+        public string LastCountRedResult3
+        {
+            get
+            {
+                return _LastCountRedResult3;
+            }
+            set
+            {
+                _LastCountRedResult3 = value;
+            }
+        }
+
+        public int LastCountResult3
+        {
+            get
+            {
+                return _LastCountResult3;
+            }
+            set
+            {
+                _LastCountResult3 = value;
+            }
+        }
+
+        public string LastLotIssue4
+        {
+            get
+            {
+                return _LastLotIssue4;
+            }
+            set
+            {
+                _LastLotIssue4 = value;
+            }
+        }
+
+        public string LastRedResult4
+        {
+            get
+            {
+                return _LastRedResult4;
+            }
+            set
+            {
+                _LastRedResult4 = value;
+            }
+        }
+
+        public string LastBlueResult4
+        {
+            get
+            {
+                return _LastBlueResult4;
+            }
+            set
+            {
+                _LastBlueResult4 = value;
+            }
+        }
+
+        public string LastCountRedResult4
+        {
+            get
+            {
+                return _LastCountRedResult4;
+            }
+            set
+            {
+                _LastCountRedResult4 = value;
+            }
+        }
+
+        public int LastCountResult4
+        {
+            get
+            {
+                return _LastCountResult4;
+            }
+            set
+            {
+                _LastCountResult4 = value;
+            }
+        }
+
+        public string LastLotIssue5
+        {
+            get
+            {
+                return _LastLotIssue5;
+            }
+            set
+            {
+                _LastLotIssue5 = value;
+            }
+        }
+
+        public string LastRedResult5
+        {
+            get
+            {
+                return _LastRedResult5;
+            }
+            set
+            {
+                _LastRedResult5 = value;
+            }
+        }
+
+        public string LastBlueResult5
+        {
+            get
+            {
+                return _LastBlueResult5;
+            }
+            set
+            {
+                _LastBlueResult5 = value;
+            }
+        }
+
+        public string LastCountRedResult5
+        {
+            get
+            {
+                return _LastCountRedResult5;
+            }
+            set
+            {
+                _LastCountRedResult5 = value;
+            }
+        }
+
+        public int LastCountResult5
+        {
+            get
+            {
+                return _LastCountResult5;
+            }
+            set
+            {
+                _LastCountResult5 = value;
+            }
+        }
+        #endregion
+
+
+        public string UpdateMysqlString
+        {
+
+            get
+            {
+                string resultString = "INSERT lastfivedata_issue(LotIssue) VALUE"
+                                   + "('" + _LotIssue + "','" + _RedResult + "');\r\n";
+
+                resultString += "UPDATE lastfivedata_issue SET "
+                            + "RedResult=" + "'" + _RedResult + "'," + "BlueResult=" + "'" + _BlueResult + "'," + "LastFiveResult=" + "'" + _LastFiveResult + "',"
+                            + "LastLotIssue1=" + "'" + _LastLotIssue1 + "'," + "LastRedResult1=" + "'" + _LastRedResult1 + "'," + "LastBlueResult1=" + "'" + _LastBlueResult1 + "'," + "LastCountRedResult1=" + "'" + _LastCountRedResult1 + "'," + "LastCountResult1=" + _LastCountResult1 + ","
+                            + "LastLotIssue2=" + "'" + _LastLotIssue2 + "'," + "LastRedResult2=" + "'" + _LastRedResult2 + "'," + "LastBlueResult2=" + "'" + _LastBlueResult2 + "'," + "LastCountRedResult2=" + "'" + _LastCountRedResult2 + "'," + "LastCountResult2=" + _LastCountResult2 + ","
+                            + "LastLotIssue3=" + "'" + _LastLotIssue3 + "'," + "LastRedResult3=" + "'" + _LastRedResult3 + "'," + "LastBlueResult3=" + "'" + _LastBlueResult3 + "'," + "LastCountRedResult3=" + "'" + _LastCountRedResult3 + "'," + "LastCountResult3=" + _LastCountResult3 + ","
+                            + "LastLotIssue4=" + "'" + _LastLotIssue4 + "'," + "LastRedResult4=" + "'" + _LastRedResult4 + "'," + "LastBlueResult4=" + "'" + _LastBlueResult4 + "'," + "LastCountRedResult4=" + "'" + _LastCountRedResult4 + "'," + "LastCountResult4=" + _LastCountResult4 + ","
+                            + "LastLotIssue5=" + "'" + _LastLotIssue5 + "'," + "LastRedResult5=" + "'" + _LastRedResult5 + "'," + "LastBlueResult5=" + "'" + _LastBlueResult5 + "'," + "LastCountRedResult5=" + "'" + _LastCountRedResult5 + "'," + "LastCountResult5=" + _LastCountResult5 + ","
+                            + "Range1=" + "'" + _Range1 + "'," + "CountRedRange1=" + "'" + _CountRedRange1 + "'," + "CountRange1=" + _CountRange1 + ","
+                            + "Range2=" + "'" + _Range2 + "'," + "CountRedRange2=" + "'" + _CountRedRange2 + "'," + "CountRange2=" + _CountRange2 + ","
+                            + "Range3=" + "'" + _Range3 + "'," + "CountRedRange3=" + "'" + _CountRedRange3 + "'," + "CountRange3=" + _CountRange3 + ","
+                            + "Range4=" + "'" + _Range4 + "'," + "CountRedRange4=" + "'" + _CountRedRange4 + "'," + "CountRange4=" + _CountRange4 + ","
+                            + "Range5=" + "'" + _Range5 + "'," + "CountRedRange5=" + "'" + _CountRedRange5 + "'," + "CountRange5=" + _CountRange5 + ","
+                          + " WHERE LotIssue=" + "'" + _LotIssue + "'" + ";";
+                return resultString;
+            }
+        }
+        
+    }
+
+
 }

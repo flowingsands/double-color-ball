@@ -152,6 +152,22 @@ namespace Lottery
 
         }
 
+        public static void StatisticLastFive()
+        {
+            IList<FlIssue> listFlIssue = null;
+
+            using (TableFlIssue tabFlIssue = new TableFlIssue())
+            {
+                listFlIssue = tabFlIssue.GetTableDataToList();
+            }
+
+            /* 统计最近五期的数据,并进行分区 */
+            IList<LastFiveDataIssue> lastfiveList = new List<LastFiveDataIssue>();
+            int count = listFlIssue.Count;
+
+            
+        }
+
         public static DataTable GetAwardDataTable()
         {
             DataTable dataTable = null;
