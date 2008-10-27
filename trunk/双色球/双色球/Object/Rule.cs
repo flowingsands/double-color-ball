@@ -226,17 +226,44 @@ namespace Lottery
 
     public class LastFiveNumber
     {
-        //private ArrayList[] LastFiveData;
-        private LastFiveDataIssue lastData;
+        private LastFiveDataIssue lastFiveData;
+        private string strLasvFiveResult = string.Empty;   /*　有重复的五期数字字串  */
 
         public LastFiveNumber(LastFiveDataIssue objLastFive)
         {
-            lastData = objLastFive;
+            lastFiveData = objLastFive;
         }
 
+        public LastFiveDataIssue Anlysis()
+        {
+            // first
 
+            // second
+            
+            // third
 
+            return lastFiveData;
+        }
 
+        private void AnlysisLastFiveResult()
+        {   
+            strLasvFiveResult = lastFiveData.LastLotIssue1 + lastFiveData.LastLotIssue2 + lastFiveData.LastLotIssue3 + lastFiveData.LastLotIssue4 + lastFiveData.LastLotIssue5;
+
+            string[] numberArray1 = strLasvFiveResult.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string number in numberArray1)
+            {
+                Int32 num = Convert.ToInt32(number);
+                /*
+                if (redData[0].IndexOf(num) < 0)
+                {
+                    redData[0].Add(num);
+                }
+                */
+            }
+            //redData[0].Sort(new IntCompare());
+ 
+        }
 
 
     }
