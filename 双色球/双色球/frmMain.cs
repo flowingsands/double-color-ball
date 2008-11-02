@@ -52,9 +52,9 @@ namespace Lottery
 
         private void tbarTest_Click(object sender, EventArgs e)
         {
-            FrmTestProgress frm = new FrmTestProgress();
+            FrmLastFive frm = new FrmLastFive();
             frm.MdiParent = this.MdiParent;
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void mnuDGLastFiveData_Click(object sender, EventArgs e)

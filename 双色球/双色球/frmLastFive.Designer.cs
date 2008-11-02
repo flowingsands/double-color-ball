@@ -44,8 +44,8 @@
             this.labRange2 = new System.Windows.Forms.Label();
             this.labRange1 = new System.Windows.Forms.Label();
             this.labLastFiveData = new System.Windows.Forms.Label();
-            this.dgvRangeData = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRangeData)).BeginInit();
+            this.dgvRLastFiveData = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRLastFiveData)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -176,14 +176,14 @@
             this.labLastFiveData.TabIndex = 7;
             this.labLastFiveData.Text = "最近五期：";
             // 
-            // dgvRangeData
+            // dgvRLastFiveData
             // 
-            this.dgvRangeData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRangeData.Location = new System.Drawing.Point(26, 267);
-            this.dgvRangeData.Name = "dgvRangeData";
-            this.dgvRangeData.RowTemplate.Height = 23;
-            this.dgvRangeData.Size = new System.Drawing.Size(731, 206);
-            this.dgvRangeData.TabIndex = 6;
+            this.dgvRLastFiveData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRLastFiveData.Location = new System.Drawing.Point(26, 267);
+            this.dgvRLastFiveData.Name = "dgvRLastFiveData";
+            this.dgvRLastFiveData.RowTemplate.Height = 23;
+            this.dgvRLastFiveData.Size = new System.Drawing.Size(731, 206);
+            this.dgvRLastFiveData.TabIndex = 6;
             // 
             // FrmLastFive
             // 
@@ -206,10 +206,11 @@
             this.Controls.Add(this.labRange2);
             this.Controls.Add(this.labRange1);
             this.Controls.Add(this.labLastFiveData);
-            this.Controls.Add(this.dgvRangeData);
+            this.Controls.Add(this.dgvRLastFiveData);
             this.Name = "FrmLastFive";
             this.Text = "最近五期数据统计分析";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRangeData)).EndInit();
+            this.Load += new System.EventHandler(this.FrmLastFive_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRLastFiveData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +234,6 @@
         private System.Windows.Forms.Label labRange2;
         private System.Windows.Forms.Label labRange1;
         private System.Windows.Forms.Label labLastFiveData;
-        private System.Windows.Forms.DataGridView dgvRangeData;
+        private System.Windows.Forms.DataGridView dgvRLastFiveData;
     }
 }
