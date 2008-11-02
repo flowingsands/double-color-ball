@@ -191,7 +191,18 @@ namespace Lottery
 
             return dataTable;
         }
-      
+
+        public static DataTable GetLastFiveDataTable()
+        {
+            DataTable dataTable = null;
+
+            using (TableLastFiveDataIssue tabRangeIssue = new TableLastFiveDataIssue())
+            {
+                dataTable = tabRangeIssue.GetTableData();
+            }
+
+            return dataTable;
+        }
         public static void ExitApp()
         {
             if (MessageBox.Show("确定关闭系统吗？", "关闭确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
