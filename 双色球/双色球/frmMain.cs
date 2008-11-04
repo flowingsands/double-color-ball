@@ -38,6 +38,12 @@ namespace Lottery
             SystemCommon.StatisticRangeData();
         }
 
+
+        private void mnuDGLastFiveData_Click(object sender, EventArgs e)
+        {
+            SystemCommon.CalcLastFiveData();
+        }
+
         private void tbarData_Click(object sender, EventArgs e)
         {
             FrmLotteryData frmLotterData = new FrmLotteryData();
@@ -57,10 +63,7 @@ namespace Lottery
             frm.Show();
         }
 
-        private void mnuDGLastFiveData_Click(object sender, EventArgs e)
-        {
-            SystemCommon.CalcLastFiveData();
-        }
+       
 
         
     }

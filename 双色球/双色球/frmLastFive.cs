@@ -27,9 +27,9 @@ namespace Lottery
 
             /* 相关属性设置 */
             dgvRLastFiveData.Columns[0].HeaderText = "彩票期号";
-            dgvRLastFiveData.Columns[1].HeaderText = "开奖结果";
-            dgvRLastFiveData.Columns[2].HeaderText = "最近五期";
-            dgvRLastFiveData.Columns[3].HeaderText = "01-03";
+            dgvRLastFiveData.Columns[1].HeaderText = "红球";
+            dgvRLastFiveData.Columns[2].HeaderText = "蓝球";
+            dgvRLastFiveData.Columns[3].HeaderText = "最近五期";
             dgvRLastFiveData.Columns[4].HeaderText = "中奖号码";
             dgvRLastFiveData.Columns[5].HeaderText = "中奖数";
             dgvRLastFiveData.Columns[6].HeaderText = "04-07";

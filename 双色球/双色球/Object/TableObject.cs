@@ -1393,7 +1393,7 @@ namespace Lottery
             get
             {
                 string resultString = "INSERT lastfivedata_issue(LotIssue) VALUE"
-                                   + "('" + _LotIssue + "','" + _RedResult + "');\r\n";
+                                   + "('" + _LotIssue + "');\r\n";
 
                 resultString += "UPDATE lastfivedata_issue SET "
                             + "RedResult=" + "'" + _RedResult + "'," + "BlueResult=" + "'" + _BlueResult + "'," + "LastFiveResult=" + "'" + _LastFiveResult + "',"
@@ -1406,7 +1406,7 @@ namespace Lottery
                             + "Range2=" + "'" + _Range2 + "'," + "CountRedRange2=" + "'" + _CountRedRange2 + "'," + "CountRange2=" + _CountRange2 + ","
                             + "Range3=" + "'" + _Range3 + "'," + "CountRedRange3=" + "'" + _CountRedRange3 + "'," + "CountRange3=" + _CountRange3 + ","
                             + "Range4=" + "'" + _Range4 + "'," + "CountRedRange4=" + "'" + _CountRedRange4 + "'," + "CountRange4=" + _CountRange4 + ","
-                            + "Range5=" + "'" + _Range5 + "'," + "CountRedRange5=" + "'" + _CountRedRange5 + "'," + "CountRange5=" + _CountRange5 + ","
+                            + "Range5=" + "'" + _Range5 + "'," + "CountRedRange5=" + "'" + _CountRedRange5 + "'," + "CountRange5=" + _CountRange5 
                           + " WHERE LotIssue=" + "'" + _LotIssue + "'" + ";";
                 return resultString;
             }

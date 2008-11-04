@@ -162,20 +162,56 @@ namespace Lottery
             }
 
             /* 统计最近五期的数据,并进行分区 */
-            IList<LastFiveDataIssue> lastfiveList = new List<LastFiveDataIssue>();
+            List<LastFiveDataIssue> lastfiveList = new List<LastFiveDataIssue>();
             
             int count = listFlIssue.Count;
-            LastFiveDataIssue objLastFiveDataIssue = new LastFiveDataIssue();
             for (int i = 0; i < count; i++)
             {
-                
+                LastFiveDataIssue objLastFiveDataIssue = new LastFiveDataIssue();
+                objLastFiveDataIssue.LotIssue = listFlIssue[i].LotIssue;
+                objLastFiveDataIssue.RedResult = listFlIssue[i].Result1;
+                objLastFiveDataIssue.BlueResult = listFlIssue[i].Result2;
+
+
                 for (int j = 0; j < 5; j++)
                 {
                     if (i + j + 1 >= count) break;
 
+                    switch (j)
+                    {
+                        case 0:
+                            objLastFiveDataIssue.LastLotIssue1 = listFlIssue[i + j + 1].LotIssue;
+                            objLastFiveDataIssue.LastRedResult1 = listFlIssue[i + j + 1].Result1;
+                            objLastFiveDataIssue.LastBlueResult1 = listFlIssue[i + j + 1].Result2;
+                            break;
+
+                        case 1:
+                            objLastFiveDataIssue.LastLotIssue2 = listFlIssue[i + j + 1].LotIssue;
+                            objLastFiveDataIssue.LastRedResult2 = listFlIssue[i + j + 1].Result1;
+                            objLastFiveDataIssue.LastBlueResult2 = listFlIssue[i + j + 1].Result2;
+                            break;
+
+                        case 2:
+                            objLastFiveDataIssue.LastLotIssue3 = listFlIssue[i + j + 1].LotIssue;
+                            objLastFiveDataIssue.LastRedResult3 = listFlIssue[i + j + 1].Result1;
+                            objLastFiveDataIssue.LastBlueResult3 = listFlIssue[i + j + 1].Result2;
+                            break;
+
+                        case 3:
+                            objLastFiveDataIssue.LastLotIssue4 = listFlIssue[i + j + 1].LotIssue;
+                            objLastFiveDataIssue.LastRedResult4 = listFlIssue[i + j + 1].Result1;
+                            objLastFiveDataIssue.LastBlueResult4 = listFlIssue[i + j + 1].Result2;
+                            break;
+
+                        case 4:
+                            objLastFiveDataIssue.LastLotIssue5 = listFlIssue[i + j + 1].LotIssue;
+                            objLastFiveDataIssue.LastRedResult5 = listFlIssue[i + j + 1].Result1;
+                            objLastFiveDataIssue.LastBlueResult5 = listFlIssue[i + j + 1].Result2;
+                            break;
+
+                    }
 
                 }
-
                 LastFiveNumber objLastFiveNumber = new LastFiveNumber(objLastFiveDataIssue);
                 LastFiveDataIssue objLastFiveTable = objLastFiveNumber.Anlysis();
 
@@ -231,6 +267,7 @@ namespace Lottery
 
             return dataTable;
         }
+     
         public static void ExitApp()
         {
             if (MessageBox.Show("确定关闭系统吗？", "关闭确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
