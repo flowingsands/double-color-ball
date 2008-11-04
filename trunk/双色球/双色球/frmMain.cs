@@ -59,7 +59,7 @@ namespace Lottery
 
         private void mnuDGLastFiveData_Click(object sender, EventArgs e)
         {
-            SystemCommon.StatisticLastFive();
+            SystemCommon.CalcLastFiveData();
         }
 
         
