@@ -966,6 +966,9 @@ namespace Lottery
         #endregion
 
         #region 函数
+
+        public LastFiveDataIssue() { }
+
         public LastFiveDataIssue(string LotIssue, string RedResult,string BlueResult,
                                 string LastFiveResult,
                                 string LastLotIssue1, string LastRedResult1, string LastBlueResult1, string LastCountRedResult1, int LastCountResult1,

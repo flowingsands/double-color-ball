@@ -163,9 +163,37 @@ namespace Lottery
 
             /* 统计最近五期的数据,并进行分区 */
             IList<LastFiveDataIssue> lastfiveList = new List<LastFiveDataIssue>();
-            int count = listFlIssue.Count;
-
             
+            int count = listFlIssue.Count;
+            LastFiveDataIssue objLastFiveDataIssue = new LastFiveDataIssue();
+            for (int i = 0; i < count; i++)
+            {
+                
+                for (int j = 0; j < 5; j++)
+                {
+                    if (i + j + 1 >= count) break;
+
+
+                }
+
+                LastFiveNumber objLastFiveNumber = new LastFiveNumber(objLastFiveDataIssue);
+                LastFiveDataIssue objLastFiveTable = objLastFiveNumber.Anlysis();
+
+                lastfiveList.Add(objLastFiveTable);
+            }
+
+            string insertString = string.Empty;
+            for (int i = 0; i < count; i++)
+            {
+                //insertString += lastfiveList[i].InsertMysqlString + "\r\n";
+                insertString += lastfiveList[i].UpdateMysqlString + "\r\n";
+            }
+
+            /* 理新到数据库　*/
+            using (TableLastFiveDataIssue tabIssue = new TableLastFiveDataIssue())
+            {
+                tabIssue.DataUpdate(insertString);
+            }
         }
 
         public static DataTable GetAwardDataTable()
