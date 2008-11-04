@@ -152,7 +152,7 @@ namespace Lottery
 
         }
 
-        public static void StatisticLastFive()
+        public static void CalcLastFiveData()
         {
             IList<FlIssue> listFlIssue = null;
 
