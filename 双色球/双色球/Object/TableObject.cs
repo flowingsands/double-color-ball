@@ -967,7 +967,64 @@ namespace Lottery
 
         #region 函数
 
-        public LastFiveDataIssue() { }
+        public LastFiveDataIssue() 
+        {
+            _LotIssue = string.Empty;
+            _RedResult = string.Empty;
+            _BlueResult = string.Empty;
+            _LastFiveResult = string.Empty;
+
+            _LastLotIssue1 = string.Empty;
+            _LastRedResult1 = string.Empty;
+            _LastBlueResult1 = string.Empty;
+            _LastCountRedResult1 = string.Empty;
+            _LastCountResult1 = 0;
+
+            _LastLotIssue2 = string.Empty;
+            _LastRedResult2 = string.Empty;
+            _LastBlueResult2 = string.Empty;
+            _LastCountRedResult2 = string.Empty;
+            _LastCountResult2 = 0;
+
+            _LastLotIssue3 = string.Empty;
+            _LastRedResult3 = string.Empty;
+            _LastBlueResult3 = string.Empty;
+            _LastCountRedResult3 = string.Empty;
+            _LastCountResult3 = 0;
+
+            _LastLotIssue4 = string.Empty;
+            _LastRedResult4 = string.Empty;
+            _LastBlueResult4 = string.Empty;
+            _LastCountRedResult4 = string.Empty;
+            _LastCountResult4 = 0;
+
+            _LastLotIssue5 = string.Empty;
+            _LastRedResult5 = string.Empty;
+            _LastBlueResult5 = string.Empty;
+            _LastCountRedResult5 = string.Empty;
+             _LastCountResult5 = 0;
+
+            _Range1 = string.Empty;
+            _CountRedRange1 = string.Empty;
+            _CountRange1 = 0;
+
+            _Range2 = string.Empty;
+            _CountRedRange2 = string.Empty;
+            _CountRange2 = 0;
+
+            _Range3 = string.Empty;
+            _CountRedRange3 = string.Empty;
+             _CountRange3 = 0;
+
+            _Range4 = string.Empty;
+            _CountRedRange4 = string.Empty;
+            _CountRange4 = 0;
+
+            _Range5 = string.Empty;
+            _CountRedRange5 = string.Empty;
+            _CountRange5 = 0;
+                
+        }
 
         public LastFiveDataIssue(string LotIssue, string RedResult,string BlueResult,
                                 string LastFiveResult,
@@ -1382,6 +1439,65 @@ namespace Lottery
             set
             {
                 _LastCountResult5 = value;
+            }
+        }
+
+        public string Range1
+        {
+            get
+            {
+                return _Range1;
+            }
+            set
+            {
+                _Range1 = value;
+            }
+        }
+
+
+        public string Range2
+        {
+            get
+            {
+                return _Range2;
+            }
+            set
+            {
+                _Range2 = value;
+            }
+        }
+        public string Range3
+        {
+            get
+            {
+                return _Range3;
+            }
+            set
+            {
+                _Range3 = value;
+            }
+        }
+        public string Range4
+        {
+            get
+            {
+                return _Range4;
+            }
+            set
+            {
+                _Range4 = value;
+            }
+        }
+
+        public string Range5
+        {
+            get
+            {
+                return _Range5;
+            }
+            set
+            {
+                _Range5 = value;
             }
         }
         #endregion

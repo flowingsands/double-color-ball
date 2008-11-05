@@ -40,10 +40,10 @@
             this.mnuDataGraph = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataGraphStatisLastFive = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDataGraphRange = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDGLastFiveData = new System.Windows.Forms.ToolStripMenuItem();
             this.tbarTools = new System.Windows.Forms.ToolStrip();
             this.tbarLotteryDataMaintenance = new System.Windows.Forms.ToolStripButton();
             this.tbarTest = new System.Windows.Forms.ToolStripButton();
-            this.mnuDGLastFiveData = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.tbarTools.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             this.mnuDataGraph});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
-            this.mnuMain.Size = new System.Drawing.Size(593, 24);
+            this.mnuMain.Size = new System.Drawing.Size(647, 24);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "mnuMain";
             // 
@@ -136,6 +136,13 @@
             this.mnuDataGraphRange.Text = "红球数据分区";
             this.mnuDataGraphRange.Click += new System.EventHandler(this.mnuDataGraphRange_Click);
             // 
+            // mnuDGLastFiveData
+            // 
+            this.mnuDGLastFiveData.Name = "mnuDGLastFiveData";
+            this.mnuDGLastFiveData.Size = new System.Drawing.Size(152, 22);
+            this.mnuDGLastFiveData.Text = "最近五期数据";
+            this.mnuDGLastFiveData.Click += new System.EventHandler(this.mnuDGLastFiveData_Click);
+            // 
             // tbarTools
             // 
             this.tbarTools.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -143,7 +150,7 @@
             this.tbarTest});
             this.tbarTools.Location = new System.Drawing.Point(0, 24);
             this.tbarTools.Name = "tbarTools";
-            this.tbarTools.Size = new System.Drawing.Size(593, 25);
+            this.tbarTools.Size = new System.Drawing.Size(647, 25);
             this.tbarTools.TabIndex = 1;
             this.tbarTools.Text = "toolStrip1";
             // 
@@ -164,21 +171,14 @@
             this.tbarTest.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbarTest.Name = "tbarTest";
             this.tbarTest.Size = new System.Drawing.Size(23, 22);
-            this.tbarTest.Text = "toolStripButton1";
+            this.tbarTest.Text = "最近五期数据";
             this.tbarTest.Click += new System.EventHandler(this.tbarTest_Click);
-            // 
-            // mnuDGLastFiveData
-            // 
-            this.mnuDGLastFiveData.Name = "mnuDGLastFiveData";
-            this.mnuDGLastFiveData.Size = new System.Drawing.Size(152, 22);
-            this.mnuDGLastFiveData.Text = "最近五期数据";
-            this.mnuDGLastFiveData.Click += new System.EventHandler(this.mnuDGLastFiveData_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 348);
+            this.ClientSize = new System.Drawing.Size(647, 413);
             this.Controls.Add(this.tbarTools);
             this.Controls.Add(this.mnuMain);
             this.IsMdiContainer = true;
