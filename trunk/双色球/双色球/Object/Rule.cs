@@ -110,6 +110,11 @@ namespace Lottery
             Anlysis();
         }
 
+        public void Anlysis(string number, string awardResult)
+        {
+
+        }
+
         private void Set(string number1)
         {
             string[] numberArray1 = number1.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
@@ -218,9 +223,7 @@ namespace Lottery
             }
 
             return rutInt;
-        }
-
-        
+        }       
 
     }
 
@@ -236,35 +239,81 @@ namespace Lottery
 
         public LastFiveDataIssue Anlysis()
         {
-            // first
+            // 分析前面五期的中奖号码
+            AnlysisCountIssue();
 
             // second
-            
+            AnlysisRange();
+
             // third
 
             return objLastFiveData;
         }
-
-        private void AnlysisLastFiveResult()
+               
+        #region CountLastFive
+        private void AnlysisCountIssue()
         {
-            strLasvFiveResult = objLastFiveData.LastLotIssue1 + objLastFiveData.LastLotIssue2 + objLastFiveData.LastLotIssue3 + objLastFiveData.LastLotIssue4 + objLastFiveData.LastLotIssue5;
-
-            string[] numberArray1 = strLasvFiveResult.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
-
-            foreach (string number in numberArray1)
-            {
-                Int32 num = Convert.ToInt32(number);
-                /*
-                if (redData[0].IndexOf(num) < 0)
-                {
-                    redData[0].Add(num);
-                }
-                */
-            }
-            //redData[0].Sort(new IntCompare());
- 
+            AnlysisCountLastFirstIssue();
+            AnlysisCountLastSecondIssue();
+            AnlysisCountLastThirdIssue();
+            AnlysisCountLastFourthIssue();
+            AnlysisCountLastFifthIssue();
         }
 
+        private void AnlysisCountLastFirstIssue()
+        {
+            AwardNumber number = new AwardNumber();
+            number.Anlysis(objLastFiveData.LastRedResult1, objLastFiveData.RedResult);
+            objLastFiveData.LastCountRedResult1 = number.GetResult();
+            objLastFiveData.LastCountResult1    = number.GetCount();
+        }
+
+        private void AnlysisCountLastSecondIssue()
+        {
+            AwardNumber number = new AwardNumber();
+            number.Anlysis(objLastFiveData.LastRedResult1 + objLastFiveData.LastRedResult2, objLastFiveData.RedResult);
+            objLastFiveData.LastCountRedResult2 = number.GetResult();
+            objLastFiveData.LastCountResult2 = number.GetCount();
+        }
+
+        private void AnlysisCountLastThirdIssue()
+        {
+            AwardNumber number = new AwardNumber();
+            number.Anlysis(objLastFiveData.LastRedResult1 + objLastFiveData.LastRedResult2 + objLastFiveData.LastRedResult3, objLastFiveData.RedResult);
+            objLastFiveData.LastCountRedResult3 = number.GetResult();
+            objLastFiveData.LastCountResult3 = number.GetCount();
+        }
+        private void AnlysisCountLastFourthIssue()
+        {
+            AwardNumber number = new AwardNumber();
+            number.Anlysis(objLastFiveData.LastRedResult1 + objLastFiveData.LastRedResult2 + objLastFiveData.LastRedResult3 + objLastFiveData.LastRedResult4, objLastFiveData.RedResult);
+            objLastFiveData.LastCountRedResult4 = number.GetResult();
+            objLastFiveData.LastCountResult4 = number.GetCount();
+        }
+        private void AnlysisCountLastFifthIssue()
+        {
+            AwardNumber number = new AwardNumber();
+            number.Anlysis(objLastFiveData.LastRedResult1 + objLastFiveData.LastRedResult2 + objLastFiveData.LastRedResult3 + objLastFiveData.LastRedResult4 + objLastFiveData.LastRedResult5, objLastFiveData.RedResult);
+            objLastFiveData.LastCountRedResult5 = number.GetResult();
+            objLastFiveData.LastCountResult5 = number.GetCount();
+        }
+        #endregion
+
+        #region 区间
+        private void AnlysisRange()
+        {
+            RangeNumber rangNumber = new RangeNumber();
+            rangNumber.Anlysis(objLastFiveData.LastRedResult1 + objLastFiveData.LastRedResult2 + objLastFiveData.LastRedResult3 + objLastFiveData.LastRedResult4 + objLastFiveData.LastRedResult5);
+            string[] redData = rangNumber.GetResult();
+            objLastFiveData.LastFiveResult = redData[0];
+            objLastFiveData.Range1 = redData[1];
+            objLastFiveData.Range2 = redData[2];
+            objLastFiveData.Range3 = redData[3];
+            objLastFiveData.Range4 = redData[4];
+            objLastFiveData.Range5 = redData[5];
+
+        }
+        #endregion
 
     }
 }

@@ -46,9 +46,11 @@ namespace Lottery
 
         private void tbarData_Click(object sender, EventArgs e)
         {
+            this.IsMdiContainer = true;
+
             FrmLotteryData frmLotterData = new FrmLotteryData();
             frmLotterData.MdiParent = this.MdiParent;
-            frmLotterData.Show();
+            frmLotterData.ShowDialog();
         }
 
         private void menuFileExit_Click(object sender, EventArgs e)
@@ -58,10 +60,13 @@ namespace Lottery
 
         private void tbarTest_Click(object sender, EventArgs e)
         {
+            this.IsMdiContainer = true;
             FrmLastFive frm = new FrmLastFive();
             frm.MdiParent = this.MdiParent;
-            frm.Show();
+            frm.ShowDialog();
         }
+
+       
 
        
 

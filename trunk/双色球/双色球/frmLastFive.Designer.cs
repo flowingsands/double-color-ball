@@ -208,6 +208,7 @@
             this.Controls.Add(this.labLastFiveData);
             this.Controls.Add(this.dgvRLastFiveData);
             this.Name = "FrmLastFive";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "最近五期数据统计分析";
             this.Load += new System.EventHandler(this.FrmLastFive_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRLastFiveData)).EndInit();
